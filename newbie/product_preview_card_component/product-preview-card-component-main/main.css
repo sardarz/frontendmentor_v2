@@ -4,7 +4,7 @@
   --secondary-dark: hsl(212, 21%, 14%);
   --secondary-dark-grayish: hsl(228, 12%, 48%);
   --white: hsl(0, 0%, 100%);
-  --btn-hover: #1A4032;
+  --btn-hover: #1a4032;
 }
 
 body {
@@ -100,13 +100,13 @@ button {
   outline: none;
   color: white;
   background-color: var(--primary-dark);
-  border-radius: .8rem;
+  border-radius: 0.8rem;
   cursor: pointer;
-  transition: all .1s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 button:active {
-  background-color: #1A4032;
+  background-color: #1a4032;
   transform: translateY(3px);
 }
 
@@ -119,3 +119,44 @@ button:active {
   background-repeat: no-repeat;
 }
 
+/* mobile layout */
+
+@media screen and (max-width: 600px) {
+  main {
+    padding: 0 1.6rem;
+    max-width: 37.5rem;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .img {
+    min-height: 24rem;
+    background-image: url("./images/image-product-mobile.jpg");
+  }
+
+  .info {
+    padding: 2.4rem 2.4rem 0;
+  }
+
+  .note {
+    margin-bottom: 1.2rem;
+  }
+
+  h1 {
+    margin-bottom: 1.6rem;
+  }
+
+  p {
+    margin-bottom: 2.4rem;
+    line-height: 2.3rem;
+  }
+
+  button {
+    margin-top: 2rem;
+    margin-bottom: 2.4rem;
+    justify-content: center;
+    width: 100%;
+  }
+}
