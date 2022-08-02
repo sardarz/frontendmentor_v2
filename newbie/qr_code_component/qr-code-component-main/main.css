@@ -1,0 +1,10 @@
+:root {
+  --light-accent: hsl(212, 45%, 89%);
+  --secondary: hsl(220, 15%, 55%);
+  --primary: hsl(218, 44%, 22%);
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: 'Outfit', sans-serif;
+}
