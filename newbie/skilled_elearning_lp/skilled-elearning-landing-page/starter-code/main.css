@@ -179,3 +179,87 @@ h3 {
   width: 8.9rem;
 }
 
+/* Tablet layout */
+@media screen and (min-width: 768px) {
+  body {
+    /* overflow: hidden; */
+  }
+  .container {
+    max-width: 768px;
+    padding: 0 4rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 5.6rem 1.1rem;
+  }
+
+  .header {
+    padding-top: 2.4rem;
+  }
+
+  .hero {
+    margin-bottom: 21rem;
+  }
+
+  .hero-wrapper{
+    max-width: 60%;
+  }
+
+  .img-container img {
+    display: none;
+  }
+
+  .tablet-img {
+    background-image: url("./assets/image-hero-tablet.png");
+    height: 64rem;
+    width: 64rem;
+    background-size: cover;
+    position: absolute;
+    top: -9.2rem;
+    overflow: hidden;
+    left: 54%;
+    
+  }
+
+  .footer {
+    padding: 3.6rem 0;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 111rem;
+  } 
+
+  .tablet-img {
+    background-image: url("./assets/image-hero-desktop.png");
+    width: 99.2rem;
+    height: 93.7rem;
+    z-index: 10;
+    left: 50%;
+    top: -20%;
+  }
+
+  .hero {
+    margin-top: 17rem;
+    margin-bottom: 22.6rem;
+  }
+
+  .hero p {
+    margin-bottom: 4rem;
+  }
+
+  .hero-wrapper {
+    max-width: 38%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8rem 3rem;
+  }
+}
