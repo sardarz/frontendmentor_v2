@@ -1,0 +1,39 @@
+:root {
+  --clr-primary-400: #13183F;
+  --clr-secondary-400: #83869a; 
+  --clr-secondary-500: #f74780;
+  --clr-secondary-100: #fff;
+  --clr-accent-200: #666ca3;
+  --clr-accent-100: #ffa7c3;
+
+  --gradient-100: #f02aa6 #ff6f48;
+  --gradient-200: #4851ff #f02aa6;
+
+  --fs-heading-xl: 5.6rem;
+  --fs-heading-l: 4rem;
+  --fs-heading-m: 3.2rem;
+  --fs-heading-s: 2.4rem;
+  
+  --fs-m: 1.8rem;
+  --fs-s: 1.6rem;
+
+  --lh-xl: 7rem;
+  --lh-l: 5.1rem;
+  --lh-m: 4rem;
+  --lh-s: 2.8rem;
+
+  --ff-primary: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  font-size: var(--fs-s);
+  font-family: var(--ff-primary);
+}
+
+.container {
+
+}
+
+.logo {
+  width: 8.9rem;
+}
