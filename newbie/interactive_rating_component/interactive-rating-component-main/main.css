@@ -145,7 +145,7 @@ label {
   color: var(--clr-neutral-medium);
   border-radius: 50%;
   cursor: pointer;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 label:hover {
@@ -170,7 +170,7 @@ input:checked + label {
   line-height: 1.9rem;
   letter-spacing: 2px;
   cursor: pointer;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn:focus {
@@ -197,6 +197,7 @@ input:checked + label {
   top: 0;
   z-index: -1;
   padding: 3.4rem 2.4rem 3.7rem;
+  transform: scale(0);
 }
 
 .img-wrapper {
@@ -262,4 +263,23 @@ input:checked + label {
     font-size: 1.5rem;
     line-height: 2.4rem;
   }
+}
+
+/* Animation */
+main {
+  --animationDuration: 0.5s;
+}
+
+.rating-card {
+  transition: transform var(--animationDuration) ease;
+}
+.thank-card {
+  transition: transform var(--animationDuration) ease var(--animationDuration);
+}
+.replace-rating-card {
+  transform: scale(0);
+}
+
+.replace-thank-card {
+  transform: scale(1);
 }
