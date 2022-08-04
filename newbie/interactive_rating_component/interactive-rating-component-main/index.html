@@ -12,13 +12,20 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="main.css">
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body>
     <main class="main">
       <div class="container">
         <div class="card rating">
-          <div class="icon"></div>
+          <div class="icon">
+            <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="m9.067.43 1.99 4.031c.112.228.33.386.58.422l4.45.647a.772.772 0 0 1 .427 1.316l-3.22 3.138a.773.773 0 0 0-.222.683l.76 4.431a.772.772 0 0 1-1.12.813l-3.98-2.092a.773.773 0 0 0-.718 0l-3.98 2.092a.772.772 0 0 1-1.119-.813l.76-4.431a.77.77 0 0 0-.222-.683L.233 6.846A.772.772 0 0 1 .661 5.53l4.449-.647a.772.772 0 0 0 .58-.422L7.68.43a.774.774 0 0 1 1.387 0Z" fill="#FC7614"/></svg>
+          </div>
           <h2>How did we do?</h2>
           <p>
             Please let us know how we did with your support request. All
@@ -27,34 +34,38 @@
           <form>
             <div class="rating-wrapper">
               <div class="input-wrapper">
-                <label for="1">1</label>
                 <input type="radio" name="rating" id="1" />
+                <label for="1">1</label>
               </div>
               <div class="input-wrapper">
-                <label for="2">2</label>
                 <input type="radio" name="rating" id="2" />
+                <label for="2">2</label>
               </div>
               <div class="input-wrapper">
-                <label for="3">3</label>
+                <!-- <label for="3"><div class="label-wrapper">3</div></label> -->
                 <input type="radio" name="rating" id="3" />
+                <label for="3">3</label>
               </div>
               <div class="input-wrapper">
-                <label for="4">4</label>
                 <input type="radio" name="rating" id="4" />
+                <label for="4">4</label>
               </div>
               <div class="input-wrapper">
-                <label for="5">5</label>
                 <input type="radio" name="rating" id="5" />
+                <label for="5">5</label>
               </div>
             </div>
             <button type="button" class="btn">Submit</button>
           </form>
         </div>
         <div class="card thanks">
-          <div class="img-wrapper"></div>
-          <p class="output-msg">
-            You selected <span class="output"></span> out of 5
-          </p>
+          <div class="img-wrapper"><img src="./images/illustration-thank-you.svg" alt=""></div>
+          <div class="output-msg">
+            <div class="output-msg-wrapper">
+              You selected <span class="output"></span> out of 5
+
+            </div>
+          </div>
           <h2>Thank you!</h2>
           <p>
             We appreciate you taking the time to give a rating. If you ever need

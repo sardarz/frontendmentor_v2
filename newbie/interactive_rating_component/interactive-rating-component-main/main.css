@@ -5,6 +5,168 @@
   --clr-neutral-medium: hsl(216, 12%, 54%);
   --clr-neutral-dark: hsl(213, 19%, 18%);
   --clr-netral-very-dark: hsl(216, 12%, 8%);
+
+  --ff: "Overpass", sans-serif;
+}
+
+body {
+  display: grid;
+  place-content: center;
+
+  min-height: 100vh;
+  background-color: var(--clr-netral-very-dark);
+
+  color: var(--clr-neutral-light);
+  font-size: 1.4rem;
+  font-family: var(--ff);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 37.5rem;
+  padding: 0 2.4rem;
+}
+
+.card {
+  border-radius: 3rem;
+  background: linear-gradient(hsl(215, 20%, 17%), hsl(215, 24%, 12%));
+}
+
+.icon {
+  background-color: var(--clr-neutral-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.rating {
+  padding: 3.2rem;
+
+  /* mobile */
+  padding: 2.4rem;
+  padding-bottom: 3.2rem;
+}
+
+.rating-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.thanks {
+  padding: 4.5rem 3.2rem;
+}
+
+h2 {
+  color: white;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  margin: 3rem 0 .7rem;
+
+  /* mobiel */
+  margin-top: 1.6rem;
+  margin-bottom: 1.9rem;
+}
+
+p {
+  margin-bottom: 2.4rem;
+  line-height: 2.2rem;
+}
+
+.input-wrapper {
+  height: 4.2rem;
+  width: 4.2rem;
+  background-color: var(--clr-neutral-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 2.4rem;
+  position: relative;
 }
 
 
+input {
+  display: none;
+}
+
+input:checked + label {
+  transform: scale(2.1); 
+}
+
+.input-wrapper:has(input:checked) {
+  background-color: red;
+  transform: scale(1.1);
+}
+
+
+label {
+  color: var(--clr-neutral-medium);
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thanks {
+  padding: 3.4rem 2.4rem 3.7rem;
+}
+
+.thanks img {
+  height: 9.6rem;
+}
+
+.thanks p {
+  margin-bottom: 0;
+}
+
+.output-msg {
+  
+  color: var(--clr-primary);
+  display: flex;
+  justify-content: center;
+  margin: 2.4rem 0;
+}
+
+.output-msg-wrapper {
+  background-color: var(--clr-neutral-dark);
+  border-radius: 22rem;
+  display: inline-block;
+  padding: .5rem 1.2rem;
+  margin: 0 auto;
+}
+
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.thanks h2 {
+  text-align: center;
+  margin-bottom: 1.7rem;
+}
+
+.thanks p {
+  text-align: center;
+  /* margin-bottom: 3.7rem; */
+}
+
+.btn {
+  padding: 1.2rem 0;
+  width: 100%;
+  border: none;
+  background-color: var(--clr-primary);
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 2.2rem;
+  line-height: 1.9rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
