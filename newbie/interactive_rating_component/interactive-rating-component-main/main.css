@@ -135,10 +135,6 @@ input {
   display: none;
 }
 
-input:checked + label {
-  /* transform: scale(2.1); */
-}
-
 label {
   display: flex;
   justify-content: center;
@@ -149,6 +145,17 @@ label {
   color: var(--clr-neutral-medium);
   border-radius: 50%;
   cursor: pointer;
+  transition: all .3s ease;
+}
+
+label:hover {
+  background-color: var(--clr-neutral-medium);
+  color: white;
+}
+
+input:checked + label {
+  background-color: var(--clr-primary);
+  color: white;
 }
 
 .btn {
@@ -163,10 +170,20 @@ label {
   line-height: 1.9rem;
   letter-spacing: 2px;
   cursor: pointer;
+  transition: all .3s ease;
 }
 
 .btn:focus {
   outline: none;
+}
+
+.btn:hover {
+  background-color: white;
+  color: var(--clr-primary);
+}
+
+.btn:active {
+  transform: translateY(3px);
 }
 
 @media screen and (min-width: 500px) {
@@ -177,7 +194,7 @@ label {
 
 .thank-card {
   position: absolute;
-  /* top: 0; */
+  top: 0;
   z-index: -1;
   padding: 3.4rem 2.4rem 3.7rem;
 }
