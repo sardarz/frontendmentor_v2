@@ -30,7 +30,7 @@
 body {
   background-image: url("./assets/bg-main-mobile.png");
   background-repeat: no-repeat;
-  background-position: -25% 75%;
+  background-position: -25% -30rem;
   font-family: var(--ff);
   font-size: var(--fs-300);
   overflow-x: hidden;
@@ -39,13 +39,13 @@ body {
 @media screen and (min-width: 500px) {
   body {
     background-image: url("./assets/bg-main-tablet.png");
-    background-position: 50% 40%;
+    background-position: 50% -40rem;
   }
 }
 @media screen and (min-width: 1000px) {
   body {
     background-image: url("./assets/bg-main-desktop.png");
-    background-position: 80% 15%;
+    background-position: 0rem -40rem;
   }
 }
 
@@ -155,10 +155,6 @@ body {
 .cta {
   color: var(--clr-neutral-100);
   background-color: var(--clr-primary-600);
-  /* background-image: url("./assets/bg-pattern-2.svg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 28rem 42rem; */
   position: relative;
   border-radius: 1.2rem;
   margin-top: 16.6rem;
