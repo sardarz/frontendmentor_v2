@@ -1,0 +1,24 @@
+:root {
+  --clr-primary-600: #191826;
+  --clr-primary-500: #FA7453;
+
+  --clr-neutral-400: #FFB964;
+  --clr-neutral-500: #66E2DC;
+  --clr-neutral-100: #FCFAF9
+
+
+  --ff: 'IBM Plex Sans', sans-serif;
+  --fs-400: 2rem;
+  --fs-300: 1.6rem
+
+  --lh-400: 3.4rem;
+  --lh-300: 2.6rem;
+
+  --heading-xl-fs-400: 8.8rem;
+  /* --heading-xl-fs-300:   */
+  --heading-xl-lh-400: 8.8rem;
+  --heading-xl-ls-400: -1px;
+
+  --heading-l-fs-400: 4rem;
+  --heading-l-lh-400: 5.2rem;
+}
