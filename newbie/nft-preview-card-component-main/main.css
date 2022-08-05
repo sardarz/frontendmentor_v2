@@ -1,3 +1,5 @@
+/* VARIABLES */
+
 :root {
   --clr-primary-500: hsl(178, 100%, 50%);
   --clr-primary-300: hsl(215, 51%, 70%);
@@ -8,3 +10,111 @@
   --ff: 'Outfit', sans-serif;
   --fs-400: 1.8rem;
 }
+
+body {
+  min-height: 100vh;
+  background-color: var(--clr-neutral-600);
+  font-family: var(--ff);
+  font-size: var(--fs-400);
+  color: var(--clr-primary-300);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 2.4rem;
+}
+
+.card-wrapper {
+  padding: 2.4rem;
+  background-color: var(--clr-neutral-500);
+  border-radius: 1.5rem;
+}
+
+h1 {
+  color: white;
+  font-size: 2.2rem;
+  margin: 2.4rem 0 1.2rem;
+}
+
+.card-info {
+  font-weight: 300;
+  margin-bottom: 1.6rem;
+  line-height: 2.5rem;
+}
+
+@media screen and (min-width: 400px) {
+  h1 {
+    margin-bottom: 1.6rem;
+  }
+
+  .card-info {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.price-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.price-margin-left {
+  margin-left: .7rem;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: var(--clr-primary-500);
+}
+
+
+.days-left {
+  display: flex;
+  align-items: center;
+}
+
+.days-left-icon {
+  height: 1.6rem;
+}
+
+.days-left-icon img {
+  height: 100%;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--clr-neutral-400);
+  margin: 1.6rem 0;
+}
+
+@media screen and (min-width: 400px) {
+  hr {
+    margin-top: 2.4rem;
+  }
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 1.6rem;
+}
+
+.author-img {
+  width: 3.3rem;
+  height: 3.3rem;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.accent {
+  color: white;
+}
+
