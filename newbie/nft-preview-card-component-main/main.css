@@ -6,8 +6,8 @@
   --clr-neutral-600: hsl(217, 54%, 11%);
   --clr-neutral-500: hsl(216, 50%, 16%);
   --clr-neutral-400: hsl(215, 32%, 27%);
-  
-  --ff: 'Outfit', sans-serif;
+
+  --ff: "Outfit", sans-serif;
   --fs-400: 1.8rem;
 }
 
@@ -31,6 +31,48 @@ body {
   padding: 2.4rem;
   background-color: var(--clr-neutral-500);
   border-radius: 1.5rem;
+  max-width: 35rem;
+}
+
+@media screen and (min-width: 400px) {
+  .card-wrapper {
+    padding-bottom: 3.2rem;
+  }
+}
+
+.card-img-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.card-img-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:hsla(178, 100%, 50%, 0.5);
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+.card-img-wrapper:hover::before {
+  opacity: 1;
+}
+
+.card-img-wrapper-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4.4rem;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+.card-img-wrapper:hover .card-img-wrapper-icon {
+  opacity: 1;
 }
 
 h1 {
@@ -63,7 +105,7 @@ h1 {
 }
 
 .price-margin-left {
-  margin-left: .7rem;
+  margin-left: 0.7rem;
 }
 
 .price {
@@ -72,7 +114,6 @@ h1 {
   font-weight: 600;
   color: var(--clr-primary-500);
 }
-
 
 .days-left {
   display: flex;
@@ -118,3 +159,11 @@ hr {
   color: white;
 }
 
+/* Effects */
+.highlight {
+  transition: color .3s ease-in-out;
+  cursor: pointer;
+}
+.highlight:hover {
+  color: var(--clr-primary-500);
+}
