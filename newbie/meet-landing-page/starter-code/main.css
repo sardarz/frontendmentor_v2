@@ -5,7 +5,7 @@
   --clr-primary-300: #855fb1;
   --clr-primary-200: #fafafa;
 
-  -ff: sans-serif;
+  --ff: 'Red Hat Display', sans-serif;
 
   --heading-xl-fs-300: 4rem;
   --heading-xl-lh-300: 4.4rem;
@@ -28,11 +28,14 @@
 
 }
 
+
 body {
   display: grid;
   place-items: center;
   padding: 4.8rem 0 7.2rem;
   min-height: 100vh;
+  background-color: var(--clr-primary-200);
+  font-family: var(--ff);
   font-size: var(--fs-400);
   font-weight: 500;
   line-height: var(--lh-400);
@@ -57,6 +60,12 @@ h1, h2 {
 
 .container {
   padding: 0 2.4rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 111rem;
+  }
 }
 
 /* IMAGERY */
@@ -94,6 +103,47 @@ img {
   }
 }
 
+/* INFO */
+.info {
+  margin-bottom: 17.6rem;
+}
+
+.info-wrapper h2 {
+  margin: 2.4rem 0 3.2rem;
+}
+
+.info p:last-child {
+  color: var(--clr-primary-500);
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 700px) {
+  .info {
+    margin-bottom: 19.2rem;
+  }
+
+  .info-wrapper h2 {
+    margin: 2.4rem auto 3.2rem;
+    max-width: 44.5rem;
+  }
+
+  .info-wrapper p:last-child {
+    max-width: 57.3rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .info {
+    max-width: 54rem;
+    margin-bottom: 18.4rem;
+  }
+
+  .info-text {
+    font-size: 1.8rem;
+  }
+}
+
+/* FOOTER */
 
 
 
@@ -126,12 +176,44 @@ img {
 
 
 
+h1 {
+  font-size: var(--heading-xl-fs-300);
+  line-height: var(--heading-xl-lh-300);
+}
 
+h2 {
+  font-size: var(--heading-l-fs-300);
+  line-height: var(--heading-l-lh-300);
+}
 
+@media screen and (min-width: 700px) {
+  h1 {
+    font-size: var(--heading-xl-fs-400);
+    line-height: var(--heading-xl-lh-400);
+  }
+  
+  h2 {
+    font-size: var(--heading-l-fs-400);
+    line-height: var(--heading-l-lh-400);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: var(--heading-xl-fs-500);
+    line-height: var(--heading-xl-lh-500);
+  }
+  
+  h2 {
+    font-size: var(--heading-l-fs-500);
+    line-height: var(--heading-l-lh-500);
+  }
+}
 
 .accent {
   font-size: 1.6rem;
   letter-spacing: 4px;
   text-transform: uppercase;
   font-weight: 900;
+  color: var(--clr-primary-400);
 }
