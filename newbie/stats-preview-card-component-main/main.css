@@ -12,13 +12,11 @@
 
   --heading-xl-fs-300: 2.8rem;
   --heading-xl-lh-300: 3.2rem;
-
-
 }
 
 body {
   font-size: 1.5rem;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 2.5rem;
   background-color: var(--clr-primary-400);
   color: white;
@@ -35,6 +33,20 @@ body {
   overflow: hidden;
 }
 
+.main-img-wrapper {
+  background-color: var(--clr-primary-100);
+}
+
+.mobile-img {
+  mix-blend-mode: multiply;
+}
+
+.desktop-img {
+  display: none;
+  mix-blend-mode: multiply;
+  height: 44.2rem;
+}
+
 .main-info-wrapper {
   text-align: center;
   padding: 4rem 3.2rem 3.2rem;
@@ -46,7 +58,7 @@ h1 {
 }
 
 h1 span {
-  color: var(--clr-primary-100)
+  color: var(--clr-primary-100);
 }
 
 h1 + p {
@@ -69,9 +81,58 @@ li + li {
 }
 
 .main-stats-text {
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   color: var(--clr-neutral-25);
   text-transform: uppercase;
   font-size: 1.2rem;
   letter-spacing: 1px;
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    padding: 0;
+  }
+
+  .main {
+    max-width: 111rem;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .main > * {
+    flex-basis: 100%;
+  }
+
+  .mobile-img {
+    display: none;
+  }
+
+  .desktop-img {
+    display: block;
+  }
+
+  .main-info-wrapper {
+    text-align: left;
+    padding: 7.2rem 7.2rem 6rem;
+  }
+
+  h1 {
+    font-size: var(--heading-xl-fs-400);
+    line-height: var(--heading-xl-lh-400);
+  }
+
+  h1 + p {
+    margin-top: 2.5rem;
+    margin-bottom: 7.2rem;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+  }
+
+  li + li {
+    margin-top: 0;
+  }
 }
