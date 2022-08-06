@@ -5,7 +5,10 @@
   --clr-primary-300: #855fb1;
   --clr-primary-200: #fafafa;
 
-  --ff: 'Red Hat Display', sans-serif;
+  --clr-neutral-400: #8fe3f9;
+  --clr-neutral-300: #d9b8ff;
+
+  --ff: "Red Hat Display", sans-serif;
 
   --heading-xl-fs-300: 4rem;
   --heading-xl-lh-300: 4.4rem;
@@ -24,10 +27,7 @@
 
   --fs-400: 1.8rem;
   --lh-400: 2.6rem;
-
-
 }
-
 
 body {
   display: grid;
@@ -48,7 +48,8 @@ body {
   }
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: 900;
 }
 
@@ -59,6 +60,7 @@ h1, h2 {
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 111rem;
+    padding: 0;
   }
 }
 
@@ -206,7 +208,7 @@ img {
     background-image: url("./assets/desktop/image-footer.jpg");
     text-align: left;
   }
-  
+
   .footer h2 {
     max-width: 35rem;
   }
@@ -214,7 +216,7 @@ img {
   .footer .container {
     margin: 0 auto;
   }
-  
+
   .footer-wrapper {
     flex-direction: row;
   }
@@ -222,36 +224,46 @@ img {
   .footer p {
     max-width: 35rem;
     margin: 0 9.2rem 0 12.5rem;
-    /* align-self: flex-start; */
   }
 }
 
+/* BUTTON */
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: 2.9rem;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-decoration: none;
+  transition: background-color .3s ease;
+}
 
+.btn-download {
+  width: 19.3rem;
+  text-align: center;
+  padding: 1.6rem 4rem;
+  background-color: var(--clr-primary-400);
+}
 
+.btn-download:hover {
+  background-color: var(--clr-neutral-400);
+}
 
+.btn-what {
+  padding: 1.6rem 2.9rem;
+  background-color: var(--clr-primary-300);
+}
 
+.footer .btn-download {
+  background-color: var(--clr-primary-300);
+}
 
+.footer .btn-download:hover, .btn-what:hover {
+  background-color: var(--clr-neutral-300);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* UTILS */
 
 .number {
   display: flex;
@@ -291,7 +303,7 @@ h2 {
     font-size: var(--heading-xl-fs-400);
     line-height: var(--heading-xl-lh-400);
   }
-  
+
   h2 {
     font-size: var(--heading-l-fs-400);
     line-height: var(--heading-l-lh-400);
@@ -303,7 +315,7 @@ h2 {
     font-size: var(--heading-xl-fs-500);
     line-height: var(--heading-xl-lh-500);
   }
-  
+
   h2 {
     font-size: var(--heading-l-fs-500);
     line-height: var(--heading-l-lh-500);
