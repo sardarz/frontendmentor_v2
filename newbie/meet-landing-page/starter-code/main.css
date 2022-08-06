@@ -32,7 +32,7 @@
 body {
   display: grid;
   place-items: center;
-  padding: 4.8rem 0 7.2rem;
+  padding-top: 4.8rem;
   min-height: 100vh;
   background-color: var(--clr-primary-200);
   font-family: var(--ff);
@@ -42,15 +42,9 @@ body {
   text-align: center;
 }
 
-@media screen and (min-width: 700px) {
-  body {
-    padding-bottom: 6.6rem;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   body {
-    padding: 8.3rem 0 10.4rem;
+    padding-top: 8.3rem;
   }
 }
 
@@ -70,7 +64,13 @@ h1, h2 {
 
 /* IMAGERY */
 .imagery {
+  position: relative;
   margin: 26.8rem 0 6.4rem;
+}
+
+.imagery-number {
+  left: 50%;
+  top: 0;
 }
 
 .grid {
@@ -144,6 +144,87 @@ img {
 }
 
 /* FOOTER */
+.footer {
+  position: relative;
+  padding: 7.2rem 0 9.2rem;
+  justify-self: stretch;
+  background-image: url("./assets/mobile/image-footer.jpg");
+  background-size: cover;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsla(192, 37%, 48%, 0.8);
+}
+
+.footer-number {
+  top: 0;
+  left: 50%;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-text {
+  margin: 2.4rem 0 3.2rem;
+  color: var(--clr-primary-200);
+  font-weight: 500;
+}
+
+.footer h2 {
+  max-width: 35.7rem;
+  color: white;
+}
+
+@media screen and (min-width: 700px) {
+  .footer {
+    padding: 9.2rem 0 6.6rem;
+    background-image: url("./assets/tablet/image-footer.jpg");
+  }
+
+  .footer h2 {
+    max-width: 45.7rem;
+  }
+
+  .footer p {
+    max-width: 57.3rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding: 11.6rem 0 10.4rem;
+    background-image: url("./assets/desktop/image-footer.jpg");
+    text-align: left;
+  }
+  
+  .footer h2 {
+    max-width: 35rem;
+  }
+
+  .footer .container {
+    margin: 0 auto;
+  }
+  
+  .footer-wrapper {
+    flex-direction: row;
+  }
+
+  .footer p {
+    max-width: 35rem;
+    margin: 0 9.2rem 0 12.5rem;
+    /* align-self: flex-start; */
+  }
+}
 
 
 
@@ -172,9 +253,28 @@ img {
 
 
 
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border: 1px solid hsl(240, 10%, 57%, 0.25);
+  width: 5.6rem;
+  height: 5.6rem;
+  background-color: var(--clr-primary-200);
+  border-radius: 50%;
+  color: var(--clr-primary-500);
+  transform: translate(-50%, -50%);
+}
 
-
-
+.number::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  height: 8.4rem;
+  width: 1px;
+  background-color: hsl(240, 10%, 57%, 0.25);
+}
 
 h1 {
   font-size: var(--heading-xl-fs-300);
