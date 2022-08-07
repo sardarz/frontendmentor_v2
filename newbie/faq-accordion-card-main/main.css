@@ -1,0 +1,15 @@
+:root {
+  --clr-primary-500: 238, 29%, 16%;
+  --clr-primary-400: 14, 88%, 65%;
+  --clr-neutral-500: 237, 12%, 33%;
+  --clr-neutral-400: 240, 6%, 50%;
+
+  --clr-gradient-500: 273, 75%, 66%;
+  --clr-gradient-400: 240, 73%, 65%;
+
+  --clr-divider: 240, 5%, 91%;
+
+  -ff: 'Kumbh Sans', sans-serif;
+  --fs-300: 1.2rem;
+}
+
