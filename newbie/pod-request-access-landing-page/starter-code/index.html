@@ -32,7 +32,7 @@
     <main class="main">
       <div class="container">
         <div class="main-content">
-          <h1 class="main-title">Publish your podcasts everywhere.</h1>
+          <h1 class="main-title"><span>Publish your podcasts </span> everywhere.</h1>
           <p class="main-text">
             Upload your audio to Pod with a single click. We’ll then distribute
             your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket
@@ -42,15 +42,15 @@
           <form action="#" class="main-form">
             <div class="email-wrapper">
               <input
-                type="email"
+                type="text"
                 name="email"
                 id="email"
                 placeholder="Email address"
               />
-              <button class="btn">Request access</button>
+              <button class="btn" type="button">Request access</button>
             </div>
 
-            <button class="btn">Request access</button>
+            <button class="btn btn-mobile" type="button">Request access</button>
           </form>
 
           <ul class="icon-wrapper">
@@ -340,5 +340,23 @@
 
     <img src="./assets/desktop/image-host.jpg" alt="" class="bg-img">
     <img src="./assets/desktop/bg-pattern-dots.svg" alt="" class="bg-pattern">
+
+    <script>
+      const email = document.querySelector("#email")
+      const emailWrapper = document.querySelector(".email-wrapper")
+      const btns = document.querySelectorAll(".btn")
+      const regex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
+
+      btns.forEach(x => {
+        x.addEventListener('click', evt => {
+          if (!regex.test(email.value)) {
+            emailWrapper.classList.add('error')
+          } else {
+            emailWrapper.classList.remove('error')
+            console.log('success')
+          }
+        })
+      })
+    </script>
   </body>
 </html>

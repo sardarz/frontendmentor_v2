@@ -7,8 +7,8 @@
   --clr-neutral-400: #2c344b;
 
   --clr-svg-300: #5a668a;
-  
-  --ff: 'Chivo', sans-serif;
+
+  --ff: "Chivo", sans-serif;
   --fs-300: 1.5rem;
   --fs-400: 1.8rem;
 
@@ -20,4 +20,154 @@
   --heading-h1-lh-500: 6.2rem;
 }
 
+body {
+  background-color: var(--clr-neutral-500);
+  min-height: 100vh;
+  /* Попробывать сделать изображение через background */
+  font-family: var(--ff);
+  font-size: var(--fs-400);
+  font-weight: 300;
+}
 
+.container {
+  max-width: 111rem;
+  margin: 0 auto;
+}
+
+.header {
+  margin-top: 10.2rem;
+  margin-bottom: 10.3rem;
+}
+
+.main-content {
+  max-width: 72.3rem;
+  padding-top: 8.8rem;
+  padding-right: 5.8rem;
+  background-color: var(--clr-neutral-500);
+}
+
+.main-title {
+  font-size: var(--heading-h1-fs-500);
+  font-weight: 300;
+  line-height: var(--heading-h1-lh-500);
+  text-transform: uppercase;
+  color: white;
+}
+
+.main-title span {
+  color: var(--clr-primary-400);
+}
+
+.main-text {
+  font-size: var(--fs-400);
+  line-height: 2.8rem;
+  color: var(--clr-primary-200);
+  max-width: 44.5rem;
+  margin: 2.4rem 0 4rem;
+}
+
+.main-form {
+  margin-bottom: 6.4rem;
+}
+
+.email-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  max-width: 42.7rem;
+}
+
+#email {
+  display: block;
+  width: 100%;
+  position: relative;
+  background-color: var(--clr-neutral-400);
+  padding: 1.9rem 3.2rem;
+  border: none;
+  border-radius: 2.8rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+#email::placeholder {
+  color: white;
+}
+
+.email-wrapper::before {
+  content: "Oops! Please check your email";
+  position: absolute;
+  top: 6.4rem;
+  z-index: 10;
+  color: hsla(0, 96%, 61%, 1);
+  font-size: 1.2rem;
+  left: 3.2rem;
+  opacity: 0;
+}
+
+.error.email-wrapper::before {
+  opacity: 1;
+}
+
+input:focus {
+  outline: none;
+}
+
+.btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 2.8rem;
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-500);
+  padding: .9rem 2.7rem;
+  cursor: pointer;
+  height: 4.6rem;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2.7rem;
+  max-height: 2.9rem;
+}
+
+li {
+  list-style: none;
+}
+
+.bg-img {
+  position: absolute;
+  right: 0;
+  top: 13rem;
+  z-index: -5;
+}
+
+.bg-pattern {
+  position: absolute;
+  right: 0;
+  top: 71.8rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-mobile {
+  display: none;
+}
