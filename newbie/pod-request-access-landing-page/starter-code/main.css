@@ -1,0 +1,23 @@
+:root {
+  --clr-primary-400: #54e6af;
+  --clr-primary-100: white;
+  --clr-primary-200: #c2cbe5;
+
+  --clr-neutral-500: #121725;
+  --clr-neutral-400: #2c344b;
+
+  --clr-svg-300: #5a668a;
+  
+  --ff: 'Chivo', sans-serif;
+  --fs-300: 1.5rem;
+  --fs-400: 1.8rem;
+
+  --heading-h1-fs-300: 2.7rem;
+  --heading-h1-lh-300: 3.8rem;
+  --heading-h1-fs-400: 4.8rem;
+  --heading-h1-lh-400: 5.6rem;
+  --heading-h1-fs-500: 5.2rem;
+  --heading-h1-lh-500: 6.2rem;
+}
+
+
