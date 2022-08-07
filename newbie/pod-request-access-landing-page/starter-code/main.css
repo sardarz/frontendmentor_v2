@@ -154,6 +154,42 @@ li {
   display: none;
 }
 
+@media screen and (max-width: 1000px) {
+  body {
+    background-image: url("./assets/tablet/image-host.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+
+  .bg-img {
+    display: none;
+  }
+
+  .container {
+    padding: 0 3.9rem;
+  }
+
+  .main-content {
+    max-width: 63.5rem;
+    padding-right: 0;
+  }
+
+  .main-title {
+    font-size: var(--heading-h1-fs-400);
+    line-height: var(--heading-h1-lh-400);
+  }
+
+  .main-text {
+    margin-top: 3.1rem;
+  }
+
+  .bg-pattern {
+
+  }
+}
+
+
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
