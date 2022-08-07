@@ -73,6 +73,10 @@ h1 {
   transform: translateX(-50%);
 }
 
+.woman-desktop, .pattern-desktop, .bg-box {
+  display: none;
+}
+
 /* MAIN FAQ*/
 .main-content {
   background-color: #fff;
@@ -151,4 +155,68 @@ h1 {
 .open .inner-para {
   height: 100%;
   overflow: visible;
+}
+
+@media screen and (min-width: 600px) {
+  .main {
+    max-width: 92rem;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .main-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    text-align: left;
+  }
+
+  .bg-wrapper {
+    height: 100%;
+    position: relative;
+  }
+
+  .faq-wrapper {
+    padding: 6.5rem 9.5rem 8.3rem 0
+  }
+
+  .woman-mobile, .pattern-mobile {
+    display: none;
+  }
+
+  .woman-desktop, .pattern-desktop, .bg-box {
+    display: block;
+    position: absolute;
+  }
+
+  .woman-desktop {
+    top: 11rem;
+    left: -7rem;
+  }
+
+  .main-content {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .img-wrapper {
+    position: absolute;
+    overflow: hidden;
+    height: 46rem;
+    width: 92rem;
+  }
+
+  .pattern-desktop {
+    top: -25rem;
+    left: -52.5rem;
+    z-index: 10;
+  }
+
+  .bg-box {
+    top: 22rem;
+    left: -6.2rem;
+    z-index: 10;
+  }
 }
