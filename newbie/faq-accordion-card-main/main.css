@@ -9,7 +9,146 @@
 
   --clr-divider: 240, 5%, 91%;
 
-  -ff: 'Kumbh Sans', sans-serif;
+  --ff: "Kumbh Sans", sans-serif;
   --fs-300: 1.2rem;
 }
 
+/* INITIAL SETUP */
+body {
+  padding-top: 14.8rem;
+  min-height: 100vh;
+  background: linear-gradient(
+    hsl(var(--clr-gradient-500)),
+    hsl(var(--clr-gradient-400))
+  );
+  font-family: var(--ff);
+  font-size: var(--fs-300);
+}
+
+h1 {
+  color: hsl(var(--clr-primary-500));
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+.outer-para {
+  color: hsl(var(--clr-neutral-500));
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 600px) {
+  .outer-para {
+    font-size: 1.4rem;
+  }
+}
+
+.inner-para {
+  color: hsl(var(--clr-neutral-400));
+  line-height: 1.5;
+}
+
+.container {
+  padding: 0 2.4rem;
+  margin: 0 auto;
+}
+
+/* MAIN BG */
+.bg-wrapper {
+  height: 13.2rem;
+}
+
+.woman-mobile {
+  height: 18rem;
+  position: relative;
+  top: -80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pattern-mobile {
+  width: 24rem;
+  position: relative;
+  top: -130%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* MAIN FAQ*/
+.main-content {
+  background-color: #fff;
+  border-radius: 2.3rem;
+}
+
+.faq-wrapper {
+  padding: 0 2.4rem 4.8rem;
+}
+
+.para-wrapper {
+  position: relative;
+  margin-top: 3.8rem;
+  transition: all .3s ease;
+}
+
+.para-wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: -1.8rem;
+  left: 0;
+  right: 0;
+  height: 1px;
+  z-index: 10;
+  background-color: hsl(var(--clr-divider));
+}
+
+.para-wrapper + .para-wrapper {
+  margin-top: 3.6rem;
+}
+
+.outer-para-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.outer-para-wrapper:hover .outer-para {
+  color: hsl(var(--clr-primary-400));
+}
+
+.outer-para {
+  transition: all .3s ease;
+}
+
+.open .outer-para {
+  color: hsl(var(--clr-primary-500));
+  font-weight: 700;
+}
+
+.arrow {
+  transition: all .3s ease;
+}
+
+.open .arrow {
+  transform: rotate(180deg);
+}
+
+.inner-para-wrapper {
+  height: 0;
+  transition: all .3s ease;
+  overflow: hidden;
+}
+
+.inner-para {
+  height: 0;
+  overflow: hidden;
+}
+
+.open .inner-para-wrapper {
+  height: 100%;
+  padding: 1rem 0;
+}
+
+.open .inner-para {
+  height: 100%;
+  overflow: visible;
+}
