@@ -184,7 +184,69 @@ li {
   }
 
   .bg-pattern {
+    top: 92rem;
+    right: initial;
+    left: 3rem;
+  }
+}
 
+@media screen and (max-width: 600px) {
+  body {
+    background-image: url("./assets/mobile/image-host.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .container {
+    padding: 0 2.4rem;
+  }
+
+  .header {
+    margin-top: 6.2rem;
+    margin-bottom: 5.7rem;
+  }
+
+  .header img {
+    margin: 0 auto;
+  }
+  
+
+  .main-content {
+    background-color: transparent;
+    padding-top: 0;
+  }
+
+  .main-title {
+    font-size: var(--heading-h1-fs-300);
+    line-height: var(--heading-h1-lh-300);
+    text-align: center;
+  }
+
+  .main-text {
+    margin-top: 1.6rem;
+    margin-bottom: 3.3rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .bg-pattern {
+    display: none;
+  }
+
+  .icon-wrapper {
+    display: none;
+  }
+
+  .icon-wrapper-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .icon-mobile {
+  }
+  
+  .icon-mobile img {
+    max-height: 1.7rem;
   }
 }
 
