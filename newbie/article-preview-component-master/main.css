@@ -15,12 +15,19 @@ h2 {
 }
 
 body {
+  display: grid;
+  place-content: center;
   min-height: 100vh;
   background-color: #ecf2f8;
   font-family: var(--ff);
   font-size: 1.3rem;
+  font-weight: 500;
   line-height: 2rem;
   color: var(--clr-primary-500);
+}
+
+.container {
+  padding: 0 2.4rem;
 }
 
 @media screen and (min-width: 1200px) {
@@ -28,4 +35,67 @@ body {
     font-size: 2rem;
     line-height: 2.8rem;
   }
+}
+
+.main-content {
+  position: relative;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 23.6rem 3.2rem 2rem;
+  overflow: hidden;
+}
+
+.main-content::before {
+  content: "";
+  position: absolute;
+  height: 20rem;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url("./images/drawers.jpg");
+  background-size: cover;
+}
+
+.main-text {
+  letter-spacing: 0.12px;
+  margin-top: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.main-person {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.person-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.img-wrapper {
+  width: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1.6rem;
+}
+
+.person-name {
+  color: var(--clr-primary-600);
+  font-weight: 700;
+}
+
+.arrow-wrapper {
+  background-color: var(--clr-primary-300);
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.arrow {
+  
 }
