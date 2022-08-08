@@ -1,0 +1,13 @@
+:root {
+  --clr-primary-500: hsl(300, 43%, 22%);
+  --clr-primary-300: hsl(333, 80%, 67%);
+  --clr-neutral-400: hsl(303, 10%, 53%);
+  --clr-neutral-300: hsl(300, 24%, 96%);
+
+  --ff: 'League Spartan', sans-serif;
+  --fs-400: 1.5rem;
+}
+
+body {
+  
+}
