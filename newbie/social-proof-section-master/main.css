@@ -22,6 +22,10 @@ body {
   font-size: var(--fs-400);
   padding-top: 8.2rem;
   font-weight: 500;
+  background-image: url("./images/bg-pattern-top-mobile.svg"), url("./images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: left top, bottom;
+  min-height: 100vh;
 }
 
 .container {
@@ -48,6 +52,8 @@ body {
 @media screen and (min-width: 1200px) {
   body {
     padding-top: 11.8rem;
+    background-image: url("./images/bg-pattern-top-desktop.svg"), url("./images/bg-pattern-bottom-desktop.svg");
+    background-position: top left, top 12.7rem right;
   }
 
   .container {
