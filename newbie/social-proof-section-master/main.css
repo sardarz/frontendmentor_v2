@@ -21,6 +21,7 @@ body {
   font-family: var(--ff);
   font-size: var(--fs-400);
   padding-top: 8.2rem;
+  font-weight: 500;
 }
 
 .container {
@@ -131,5 +132,63 @@ body {
   .main-rating-card:nth-child(3) {
     position: relative;
     left: 9.5rem;
+  }
+}
+
+.cards {
+  margin-top: 4.9rem;
+}
+
+.cards-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.card {
+  background-color: var(--clr-primary-500);
+  border-radius: 8px;
+  padding: 4rem 3.2rem 3.5rem;
+  color: white;
+}
+
+.card-avatar {
+  display: flex;
+  align-items: center;
+  gap: 2.3rem;
+}
+
+.card-img-wrapper {
+  max-width: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.card-buyer {
+  font-weight: 400;
+  color: var(--clr-primary-300);
+  margin-top: 4px;
+}
+
+.card-text {
+  margin-top: 2.3rem;
+  line-height: 2.2rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .cards-content {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .card {
+    max-width: 35rem;
+  }
+
+  .card:nth-child(2) {
+    transform: translateY(1.6rem);
+  }
+  .card:nth-child(3) {
+    transform: translateY(3.2rem);
   }
 }
