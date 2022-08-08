@@ -4,7 +4,7 @@
   --clr-primary-400: hsl(212, 23%, 69%);
   --clr-primary-300: hsl(210, 46%, 95%);
 
-  --ff: 'Manrope', sans-serif;
+  --ff: "Manrope", sans-serif;
 }
 
 h2 {
@@ -98,9 +98,20 @@ li {
   height: 3.2rem;
   background-color: var(--clr-primary-300);
   border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .arrow {
+  transition: fill 0.2s ease;
+}
+
+.arrow-wrapper:hover .arrow {
+  fill: white;
+}
+
+.arrow-wrapper:hover {
+  background-color: var(--clr-primary-400);
 }
 
 .icon-section {
@@ -111,7 +122,15 @@ li {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 5;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.open .icon-section {
+  display: flex;
+  opacity: 1;
+  pointer-events: all;
 }
 
 .share-text {
@@ -131,4 +150,46 @@ li {
   position: absolute;
   right: 3.2rem;
   bottom: 1.6rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .main-content {
+    max-width: 73rem;
+    padding: 3.2rem 4rem;
+    padding-left: 32.5rem;
+    overflow: visible;
+  }
+
+  .main-content::before {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: inherit;
+    width: 28.5rem;
+    height: 100%;
+  }
+
+  .icon-section {
+    padding: 1.8rem 3.7rem;
+    width: 24.8rem;
+    border-radius: 1rem;
+    left: initial;
+    right: -6.8rem;
+    bottom: 9rem;
+  }
+
+  .icon-section::before {
+    content: "";
+    bottom: -2.3rem;
+    left: 50%;
+    position: absolute;
+    border: 12px solid transparent;
+    border-color: var(--clr-primary-500) transparent transparent transparent;
+    z-index: 10;
+    transform: translateX(-50%);
+  }
+
+  .arrow-hidden {
+    display: none;
+  }
 }
