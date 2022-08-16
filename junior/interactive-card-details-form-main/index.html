@@ -1,108 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Interactive card details form</title>
 
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="main.css">
- 
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
 
-  <section class="card">
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <section class="card">
       <div class="card-content">
-        <img src="./images/bg-card-back.png" alt="" class="card-back">
+        <img src="./images/bg-card-back.png" alt="" class="card-back" />
         <div class="card-front">
-          <img src="./images/card-logo.svg" alt="" class="card-front-logo">
+          <img src="./images/card-logo.svg" alt="" class="card-front-logo" />
           <div class="card-number-wrapper">
-            <p class="card-number">0000</p>
-            <p class="card-number">0000</p>
-            <p class="card-number">0000</p>
-            <p class="card-number">0000</p>
+            <span class="card-number">0000</span>
+            <span class="card-number">0000</span>
+            <span class="card-number">0000</span>
+            <span class="card-number">0000</span>
           </div>
           <div class="card-name-expiry-wrapper">
             <p class="card-name">JANE APPLESEED</p>
-            <div class="card-expiry"><span class="month">00</span>/<span class="year">26</span></div>
+            <div class="card-expiry">
+              <span class="month">00</span>/<span class="year">00</span>
+            </div>
           </div>
         </div>
       </div>
-  </section>
+    </section>
 
-  <section class="info">
-    <div class="container">
-      <div class="info-content">
-        <form action="#" class="info-form">
-          <div class="info-name-wrapper">
-            <label for="name">CARDHOLDER NAME</label>
-            <input type="text" name="info-name" id="info-name" placeholder="e.g. Jane Appleseed">
-          </div>
-          <div class="info-card-number-wrapper">
-            <label for="info-card-number">CARD NUMBER</label>
-            <input type="text" name="info-card-number" id="info-card-number" placeholder="e.g. 1234 5678 9138 0000">
-          </div>
-          <div class="info-exp-cvc-wrapper">
-            <div class="info-expiry-wrapper">
-              <label for="info-expiry-month">Exp. date (MM/YY)</label>
-              <div class="info-expiry-month-wrapper">
-                <input type="text" name="info-expiry-month" id="info-expiry-month">
-                <input type="text" name="info-expiry-year" id="info-expiry-year">
+    <section class="info">
+      <div class="container">
+        <div class="info-content">
+          <form action="#" class="info-form">
+            <div class="info-name-wrapper">
+              <label for="name">CARDHOLDER NAME</label>
+              <input
+                type="text"
+                name="info-name"
+                id="info-name"
+                placeholder="e.g. Jane Appleseed"
+              />
+            </div>
+            <div class="info-card-number-wrapper">
+              <label for="info-card-number">CARD NUMBER</label>
+              <input
+                type="text"
+                name="info-card-number"
+                id="info-card-number"
+                placeholder="e.g. 1234 5678 9138 0000"
+              />
+            </div>
+            <div class="info-exp-cvc-wrapper">
+              <div class="info-expiry-wrapper">
+                <label for="info-expiry-month">Exp. date (MM/YY)</label>
+                <div class="info-expiry-month-wrapper">
+                  <input
+                    type="text"
+                    name="info-expiry-month"
+                    id="info-expiry-month"
+                    placeholder="MM"
+                  />
+                  <input
+                    type="text"
+                    name="info-expiry-year"
+                    id="info-expiry-year"
+                    placeholder="YY"
+                  />
+                </div>
+              </div>
+
+              <div class="info-cvc-wrapper">
+                <label for="info-cvc">CVC</label>
+                <input
+                  type="text"
+                  name="info-cvc"
+                  id="info-cvc"
+                  placeholder="e.g. 123"
+                />
               </div>
             </div>
 
-            <div class="info-cvc-wrapper">
-              <label for="info-cvc">CVC</label>
-              <input type="text" name="info-cvc" id="info-cvc" placeholder="e.g. 123">
-            </div>
+            <button type="button" class="btn confirm">Confirm</button>
+          </form>
+
+          <div class="info-complete-wrapper">
+            <img
+              src="./images/icon-complete.svg"
+              alt=""
+              class="logo-complete"
+            />
+            <h1>THANK YOU!</h1>
+            <p>We've added your card details</p>
+            <button type="button" class="btn">Continue</button>
           </div>
-          
-          <button type="button">Confirm</button>
-        </form>
-        
-        <div class="info-complete-wrapper">
-          <img src="./images/icon-complete.svg" alt="" class="logo-complete">
-          <h1>THANK YOU!</h1>
-          <p>We've added your card details</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
 
-  000
+    <script>
+      const form = document.querySelector("form")
+      const nameInput = document.querySelector("#info-name")
+      const cardNumberInput = document.querySelector("#info-card-number")
+      const monthInput = document.querySelector("#info-expiry-month")
+      const yearInput = document.querySelector("#info-expiry-year")
+      const cvcInput = document.querySelector("#info-cvc")
+      const confirmBtn = document.querySelector(".confirm")
+      const infoNameWrapper = document.querySelector(".info-name-wrapper")
+      const infoCardNumberWrapper = document.querySelector(".info-card-number-wrapper")
+      const infoExpiryWrapper = document.querySelector(".info-expiry-wrapper")
+      const infoCvcWrapper = document.querySelector(".info-cvc-wrapper")
+      const completeWrapper = document.querySelector(".info-complete-wrapper")
+      const inputWrappers = [infoNameWrapper, infoCardNumberWrapper, infoExpiryWrapper, infoCvcWrapper]
 
-  Cardholder Name
-  e.g. Jane Appleseed
+      function checkNameInputEmpty() {
+        if (nameInput.value.length === 0) return true
+        return false
+      }
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+      function checkCardNumberInputWrong() {
+        if (!/^\d+$/.test(cardNumberInput.value)) return true
+        return false
+      }
 
-  Exp. Date (MM/YY)
-  MM
-  YY
+      function checkMonthInputEmpty() {
+        if (monthInput.value === "") return true
+        return false
+      }
 
-  CVC
-  e.g. 123
+      function checkYearInputEmpty() {
+        if (yearInput.value === "") return true
+        return false
+      }
 
-  Confirm
+      function checkCVCInputEmpty() {
+        if (cvcInput.value === "") return true
+        return false
+      }
 
-  <!-- Completed state start -->
 
-  Thank you!
-  We've added your card details
-  Continue
-  
-  
-</body>
+
+      confirmBtn.addEventListener('click', evt => {
+        inputWrappers.forEach(elem => {
+          elem.classList.remove('showError')
+        })
+
+        if (checkNameInputEmpty()) {
+          infoNameWrapper.classList.add('showError')
+        }
+        if (checkCardNumberInputWrong()) {
+          infoCardNumberWrapper.classList.add('showError')
+        }
+
+        if (checkMonthInputEmpty()) {
+          infoExpiryWrapper.classList.add('showError')
+        }
+
+        if (checkCVCInputEmpty()) {
+          infoCvcWrapper.classList.add('showError')
+        }
+
+        if (inputWrappers.every(elem => !elem.classList.contains('showError'))) {
+          form.classList.add('close')
+          completeWrapper.classList.add('open')
+        }
+      })
+
+    </script>
+  </body>
 </html>
