@@ -1,0 +1,40 @@
+:root {
+  --clr-primary-700: hsl(0, 0%, 1%);
+  --clr-primary-600: hsl(7, 77%, 66%);
+  --clr-primary-300: hsl(30, 5%, 45%);
+  
+  --clr-secondary-700: hsl(252, 66%, 62%);
+  --clr-secondary-600: hsl(28, 89%, 67%);
+  --clr-secondary-500: hsl(314, 45%, 23%);
+  --clr-secondary-400: hsl(172, 46%, 57%);
+  --clr-secondary-300: hsl(0, 78%, 79%);
+
+  --clr-neutral-200: hsl(28, 100%, 97%);
+
+  --heading-l-fs-300: 3.6rem;
+  --heading-l-lh-300: 4.5rem;
+  --heading-l-fs-400: 4.4rem;
+  --heading-l-lh-400: 5.5rem;
+  --heading-l-fs-500: 5.6rem;
+  --heading-l-lh-500: 7rem;
+
+  --heading-m-fs-300: 2.6rem;
+  --heading-m-lh-300: 3.2rem;
+  --heading-m-fs-400: 3.2rem;
+  --heading-m-lh-400: 4rem;
+  --heading-m-fs-500: 4rem;
+  --heading-m-lh-500: 5rem;
+
+  --heading-s-fs-300: 2.4rem;
+  --heading-s-lh-300: 3rem;
+  --heading-s-fs-400: 3.2rem;
+  --heading-s-lh-400: 4rem;
+  --heading-s-fs-500: 3.2rem;
+  --heading-s-lh-500: 4rem;
+
+  --body-fs-300: 1.6rem;
+  --body-lh-300: 2.6rem;
+  --body-fs-400: 1.8rem;
+  --body-lh-400: 2.8rem
+}
+
