@@ -70,7 +70,7 @@ body {
 }
 
 /* HEADER AND FOOTER */
-.header {
+.header-mb {
   margin-top: 1.6rem;
 }
 
@@ -81,7 +81,7 @@ body {
   align-items: center;
 }
 
-.footer {
+.footer-mb {
   margin-bottom: 3.2rem;
 }
 
@@ -128,12 +128,12 @@ body {
 }
 
 @media screen and (min-width: 720px) {
-  .header {
-    margin-top: 5.6rem;
+  .header-mb {
+    margin-top: 3.4rem;
   }
 
-  .footer {
-    margin-bottom: 3.2rem;
+  .footer-mb {
+    margin-bottom: 5.6rem;
   }
 
   .logo {
@@ -147,7 +147,7 @@ body {
 }
 
 @media screen and (min-width: 1140px) {
-  .footer {
+  .footer-mb {
     margin-bottom: 6.4rem;
   }
 }
@@ -347,7 +347,7 @@ body {
   text-align: center;
 }
 
-.main-title {
+h2 {
   font-size: var(--heading-m-fs-300);
   line-height: var(--heading-m-lh-300);
 }
@@ -395,7 +395,7 @@ body {
     text-align: left;
   }
 
-  .main-title {
+  h2 {
     font-size: var(--heading-m-fs-400);
     line-height: var(--heading-m-lh-400);
   }
@@ -432,7 +432,7 @@ body {
     max-width: 54rem;
   }
 
-  .main-title {
+  h2 {
     font-size: var(--heading-m-fs-500);
     line-height: var(--heading-m-lh-500);
   }
@@ -440,5 +440,57 @@ body {
   .main-text-mt-mb {
     margin-top: 3.4rem;
     margin-bottom: 3.2rem;
+  }
+}
+
+/* CTA SECTION */
+.cta-mb {
+  margin-bottom: 4rem;
+}
+
+.cta-content {
+  border-radius: 1rem;
+  background-color: var(--clr-primary-700);
+  color: var(--clr-neutral-200);
+  text-align: center;
+  padding: 4.9rem 2.4rem;
+}
+
+.cta-text-mt-mb {
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+@media screen and (min-width: 720px) {
+  .cta-mb {
+    margin-bottom: 5.6rem;
+  }
+
+  .cta-content {
+    padding: 5.6rem 7.5rem 6.4rem;
+  }
+
+  .cta-text-mt-mb {
+    margin-top: 2.6rem;
+    margin-bottom: 2.6rem;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .cta-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8.1rem 9.5rem 8.1rem 6.5rem;
+    text-align: left;
+  }
+
+  .cta-text-wrapper {
+    max-width: 54rem;
+  }
+
+  .cta-text-mt-mb {
+    margin-top: 2.5rem;
+    margin-bottom: 0;
   }
 }
