@@ -2,7 +2,7 @@
   --clr-primary-700: hsl(0, 0%, 1%);
   --clr-primary-600: hsl(7, 77%, 66%);
   --clr-primary-300: hsl(30, 5%, 45%);
-  
+
   --clr-secondary-700: hsl(252, 66%, 62%);
   --clr-secondary-600: hsl(28, 89%, 67%);
   --clr-secondary-500: hsl(314, 45%, 23%);
@@ -35,6 +35,112 @@
   --body-fs-300: 1.6rem;
   --body-lh-300: 2.6rem;
   --body-fs-400: 1.8rem;
-  --body-lh-400: 2.8rem
+  --body-lh-400: 2.8rem;
 }
 
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: var(--body-fs-300);
+  line-height: var(--body-lh-300);
+  min-height: 100vh;
+}
+
+.container {
+  padding: 0 1.6rem;
+}
+
+@media screen and (min-width: 720px) {
+  .container {
+    max-width: 69rem;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .container {
+    max-width: 111rem;
+  }
+}
+
+/* HEADER AND FOOTER */
+.header {
+  margin-top: 1.6rem;
+}
+
+.header-content, .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer {
+  margin-bottom: 3.2rem;
+}
+
+.logo {
+  max-width: 4.8rem;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2.8rem;
+  color: var(--clr-neutral-200);
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  text-decoration: none;
+  border-radius: 2.8rem;
+  outline: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:focus {
+  outline: 1px solid hsl(0, 63%, 56%);
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+.idle1 {
+  background-color: var(--clr-primary-700);
+}
+
+.idle1:hover {
+  background-color: var(--clr-secondary-700);
+}
+
+.idle2 {
+  background-color: var(--clr-primary-600);
+}
+
+.idle2:hover {
+  background-color: var(--clr-secondary-600);
+}
+
+@media screen and (min-width: 720px) {
+  .header {
+    margin-top: 5.6rem;
+  }
+
+  .footer {
+    margin-bottom: 3.2rem;
+  }
+
+  .logo {
+    max-width: 6.4rem;
+  }
+
+  .btn {
+    padding: 1.4rem 4.5rem;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .footer {
+    margin-bottom: 6.4rem;
+  }
+}
