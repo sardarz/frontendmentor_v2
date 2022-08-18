@@ -40,31 +40,45 @@
 
             <ul class="spending-list clr-neutral-500 spending-list-mt">
               <li class="spending-item">
-                <div class="spending-graph"></div>
+                <div class="spending-graph">
+                  <div class="spending-graph-amount"></div>
+                </div>
                 <p class="spending-day">mon</p>
               </li>
               <li class="spending-item">
-                <div class="spending-graph"></div>
+                <div class="spending-graph">
+                  <div class="spending-graph-amount"></div>
+                </div>
                 <p class="spending-day">tue</p>
               </li>
               <li class="spending-item">
-                <div class="spending-graph"></div>
+                <div class="spending-graph">
+                  <div class="spending-graph-amount"></div>
+                </div>
                 <p class="spending-day">wed</p>
               </li>
               <li class="spending-item">
-                <div class="spending-graph"></div>
+                <div class="spending-graph">
+                  <div class="spending-graph-amount"></div>
+                </div>
                 <p class="spending-day">thu</p>
               </li>
               <li class="spending-item">
-                <div class="spending-graph"></div>
+                <div class="spending-graph">
+                  <div class="spending-graph-amount"></div>
+                </div>
                 <p class="spending-day">fri</p>
               </li>
               <li class="spending-item">
-                <div class="spending-graph"></div>
+                <div class="spending-graph">
+                  <div class="spending-graph-amount"></div>
+                </div>
                 <p class="spending-day">sat</p>
               </li>
               <li class="spending-item">
-                <div class="spending-graph"></div>
+                <div class="spending-graph">
+                  <div class="spending-graph-amount"></div>
+                </div>
                 <p class="spending-day">sun</p>
               </li>
             </ul>
@@ -88,18 +102,28 @@
 
     <script>
       const graphs = [...document.querySelectorAll(".spending-graph")];
+      const graphsSpendingAmounts = [...document.querySelectorAll('.spending-graph-amount')];
+
+      let currentDay = new Date().getDay() === 0 ? 6 : new Date().getDay() - 1
+      
       const dataJSON = fetch("./data.json")
         .then((response) => {
           return response.json();
         })
         .then((json) => {
           const data = json.map(x => x.amount)
-          console.log(data)
+          const graphWidth = graphs[0].clientWidth
           let max = Math.max(...data);
           graphs.forEach((graph, idx) => {
             graph.style.height =
               Math.max(Math.floor((data[idx] / max) * 15), 1.5) + "rem";
           });
+          graphsSpendingAmounts.forEach((spending, idx) => {
+            spending.innerHTML = data[idx]
+            const spendingWidth = spending.clientWidth
+            spending.style.transform = `translateX(-${(spendingWidth - graphWidth) / 2}px)`;
+          })
+          graphs[currentDay].classList.add('current-day')
         });
     </script>
   </body>
