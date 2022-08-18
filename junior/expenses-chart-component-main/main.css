@@ -111,14 +111,17 @@ h2 {
 }
 
 .spending-item {
+  align-self: end;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* height: 100%; */
 }
 
 .spending-graph {
-  max-height: 15rem;
+  /* max-height: 15rem;
   height: 100%;
+  height: 15rem; */
   width: 3.3rem;
   background-color: var(--clr-primary-300);
   border-radius: 3px;

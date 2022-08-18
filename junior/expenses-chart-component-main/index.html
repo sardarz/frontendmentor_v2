@@ -1,87 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Expenses chart component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
+    <title>Frontend Mentor | Expenses chart component</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="main.css">
-</head>
-<body>
-
-
-  <main class="main">
-    <div class="container">
-      <div class="main-content">
-        <div class="main-header main-header-mb">
-          <div class="balance-wrapper">
-            <p class="main-header-para-mb">My balance</p>
-            <h2>$921.48</h2>
-          </div>
-          <img src="./images/logo.svg" alt="logo of the app" class="logo">
-        </div>
-
-        <div class="spending-wrapper">
-          <h2 class="clr-neutral-600">Spending - Last 7 days</h2>
-                   
-          <ul class="spending-list clr-neutral-500 spending-list-mt">
-            <li class="spending-item">
-              <div class="spending-graph"></div>
-              <p class="spending-day">mon</p>
-            </li>
-            <li class="spending-item">
-              <div class="spending-graph"></div>
-              <p class="spending-day">tue</p>
-            </li>
-            <li class="spending-item">
-              <div class="spending-graph"></div>
-              <p class="spending-day">wed</p>
-            </li>
-            <li class="spending-item">
-              <div class="spending-graph"></div>
-              <p class="spending-day">thu</p>
-            </li>
-            <li class="spending-item">
-              <div class="spending-graph"></div>
-              <p class="spending-day">fri</p>
-            </li>
-            <li class="spending-item">
-              <div class="spending-graph"></div>
-              <p class="spending-day">sat</p>
-            </li>
-            <li class="spending-item">
-              <div class="spending-graph"></div>
-              <p class="spending-day">sun</p>
-            </li>
-          </ul>
-
-          <hr>
-
-          <div class="total-wrapper">
-            <div class="this-month-wrapper">
-              <p class="clr-neutral-500">
-                Total this month
-              </p>
-              <h1 class="clr-neutral-600">$478.33</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <div class="main-content">
+          <div class="main-header main-header-mb">
+            <div class="balance-wrapper">
+              <p class="main-header-para-mb">My balance</p>
+              <h2>$921.48</h2>
             </div>
-            <div class="last-month-wrapper">
-              <p class="clr-neutral-600">+2.4%</p>
-              <p class="clr-neutral-500">from last month</p>
-            </div>
+            <img src="./images/logo.svg" alt="logo of the app" class="logo" />
           </div>
 
+          <div class="spending-wrapper">
+            <h2 class="clr-neutral-600">Spending - Last 7 days</h2>
+
+            <ul class="spending-list clr-neutral-500 spending-list-mt">
+              <li class="spending-item">
+                <div class="spending-graph"></div>
+                <p class="spending-day">mon</p>
+              </li>
+              <li class="spending-item">
+                <div class="spending-graph"></div>
+                <p class="spending-day">tue</p>
+              </li>
+              <li class="spending-item">
+                <div class="spending-graph"></div>
+                <p class="spending-day">wed</p>
+              </li>
+              <li class="spending-item">
+                <div class="spending-graph"></div>
+                <p class="spending-day">thu</p>
+              </li>
+              <li class="spending-item">
+                <div class="spending-graph"></div>
+                <p class="spending-day">fri</p>
+              </li>
+              <li class="spending-item">
+                <div class="spending-graph"></div>
+                <p class="spending-day">sat</p>
+              </li>
+              <li class="spending-item">
+                <div class="spending-graph"></div>
+                <p class="spending-day">sun</p>
+              </li>
+            </ul>
+
+            <hr />
+
+            <div class="total-wrapper">
+              <div class="this-month-wrapper">
+                <p class="clr-neutral-500">Total this month</p>
+                <h1 class="clr-neutral-600">$478.33</h1>
+              </div>
+              <div class="last-month-wrapper">
+                <p class="clr-neutral-600">+2.4%</p>
+                <p class="clr-neutral-500">from last month</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-</body>
+    <script>
+      const graphs = [...document.querySelectorAll(".spending-graph")];
+      const dataJSON = fetch("./data.json")
+        .then((response) => {
+          return response.json();
+        })
+        .then((json) => {
+          const data = json.map(x => x.amount)
+          console.log(data)
+          let max = Math.max(...data);
+          graphs.forEach((graph, idx) => {
+            graph.style.height =
+              Math.max(Math.floor((data[idx] / max) * 15), 1.5) + "rem";
+          });
+        });
+    </script>
+  </body>
 </html>
