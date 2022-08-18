@@ -1,0 +1,31 @@
+:root {
+  --clr-primary-300: hsl(10, 79%, 65%);
+  --clr-primary-200: hsl(186, 34%, 60%);
+  --clr-neutral-600: hsl(25, 47%, 15%);
+  --clr-neutral-500: hsl(28, 10%, 53%);
+  --clr-neutral-400: hsl(27, 66%, 92%);
+  --clr-neutral-300: hsl(33, 100%, 98%);
+
+  --fs-200: 1.2rem;
+  --fs-300: 1.5rem;
+  --fs-400: 2.4rem;
+  --fs-500: 3rem;
+}
+
+@media screen and (min-width: 600px) {
+  :root {
+    --fs-200: 1.5rem;
+    --fs-300: 1.8rem;
+    --fs-400: 3.2rem;
+    --fs-500: 4.8rem;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: var(--fs-300);
+  font-family: "DM Sans", sans-serif;
+}
