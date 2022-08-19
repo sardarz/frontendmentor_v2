@@ -1,92 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="main.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <img src="./images/logo.svg" alt="" class="header-logo" />
 
-</head>
-<body>
+      <nav class="nav open">
+        <ul class="nav-list">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link-dropdown"
+              >Features
+                <img
+                  src="./images/icon-arrow-down.svg"
+                  alt=""
+                  class="arrow-down"
+                />
+            </a>
+            <ul class="dropdown-list dropdown-list-icons">
+              <li class="dropdown-list-item">
+                <a href="#"
+                  ><img
+                    src="./images/icon-todo.svg"
+                    alt=""
+                    class="dropdown-list-item-img"
+                  />Todo List</a
+                >
+              </li>
+              <li class="dropdown-list-item">
+                <a href="#"
+                  ><img
+                    src="./images/icon-calendar.svg"
+                    alt=""
+                    class="dropdown-list-item-img"
+                  />
+                  Calendar</a
+                >
+              </li>
 
-  <header class="header">
-    <img src="./images/logo.svg" alt="" class="header-logo">
+              <li class="dropdown-list-item">
+                <a href="#"
+                  ><img
+                    src="./images/icon-reminders.svg"
+                    alt=""
+                    class="dropdown-list-item-img"
+                  />
+                  Reminders</a
+                >
+              </li>
+              <li class="dropdown-list-item">
+                <a href="#"
+                  ><img
+                    src="./images/icon-planning.svg"
+                    alt=""
+                    class="dropdown-list-item-img"
+                  />
+                  Planning</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link-dropdown"
+              >Company
+     
+                <img
+                  src="./images/icon-arrow-down.svg"
+                  alt=""
+                  class="arrow-down"
+                />
 
-    <nav class="nav">
-      <ul class="nav-list">
-        <li class="nav-item dropdown">
-          <a href="#">Features <div class="arrow-wrapper">
-            <img src="./images/icon-arrow-up.svg" alt="" class="arrow-up">
-            <img src="./images/icon-arrow-down.svg" alt="" class="arrow-down">
-          </div>
-          </a>
-          <ul class="dropdown-list">
-            <li class="dropdown-list-item">
-              <a href="#"><img src="./images/icon-todo.svg" alt="" class="todo"> Todo List</a>
-            </li>
-            <li class="dropdown-list-item">
-              <a href="#"><img src="./images/icon-calendar.svg" alt="" class="todo"> Calendar</a>
-            </li>
+            </a>
+            <ul class="dropdown-list">
+              <li class="dropdown-list-item"><a href="#">History</a></li>
+              <li class="dropdown-list-item"><a href="#">Our team</a></li>
+              <li class="dropdown-list-item"><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#">Careers</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">About</a>
+          </li>
+        </ul>
 
-            <li class="dropdown-list-item">
-              <a href="#"><img src="./images/icon-reminders.svg" alt="" class="todo"> Reminders</a>
-            </li>
-            <li class="dropdown-list-item">
-              <a href="#"><img src="./images/icon-planning.svg" alt="" class="todo"> Planning</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a href="#">Company 
-            <div class="arrow-wrapper">
-            <img src="./images/icon-arrow-up.svg" alt="" class="arrow-up">
-            <img src="./images/icon-arrow-down.svg" alt="" class="arrow-down">
-          </div>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#">Careers</a>
-        </li>
-        <li class="nav-item">
-          <a href="#">About</a>
-        </li>
-      </ul>
+        <div class="login-wrapper">
+          <button type="button" class="btn btn-login">Login</button>
+          <button type="button" class="btn btn-register">Register</button>
+        </div>
+      </nav>
 
-      <div class="login-wrapper">
-        <button type="button" class="btn btn-login">Login</button>
-        <button type="button" class="btn btn-register">Register</button>
+      <div class="nav-toggle-wrapper">
+        <img src="./images/icon-close-menu.svg" alt="" class="close-img" />
+        <img src="./images/icon-menu.svg" alt="" class="hamburger-menu" />
       </div>
-    </nav>
+    </header>
 
-    <div class="nav-toggle-wrapper">
-      <img src="./images/icon-close-menu.svg" alt="" class="close-img">
-      <img src="./images/icon-menu.svg" alt="" class="hamburger-menu">
+
     </div>
-  </header>
+    Get your team in sync, no matter your location. Streamline processes, create
+    team rituals, and watch productivity soar.
 
-  Features
-  Company
-  Careers
-  About
+    <script>
+      const closeBtn = document.querySelector(".close-img")
+      const navToggleWrapper = document.querySelector(".nav-toggle-wrapper")
+      const header = document.querySelector(".header")
+      const body = document.querySelector("body")
 
-  Login
-  Register
+      navToggleWrapper.addEventListener('click', evt => {
+        header.classList.toggle('open')
+        body.classList.toggle('overlay')
+      })
 
-  Make remote work
+      const navLinkDropdowns = document.querySelectorAll(".nav-link-dropdown")
+      
+      navLinkDropdowns.forEach(navLink => {
+        navLink.addEventListener('click', evt => {
+          const dropdown = navLink.closest('.dropdown')
+          dropdown.classList.toggle('open-list')
+        })
+      })
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
-</body>
+    </script>
+  </body>
 </html>
