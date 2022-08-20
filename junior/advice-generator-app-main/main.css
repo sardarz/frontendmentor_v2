@@ -1,4 +1,14 @@
+:root {
+  --clr-primary-100: hsl(193, 38%, 86%);
+  --clr-primary-200: hsl(150, 100%, 66%);
 
+  --clr-neutral-100: hsl(217, 19%, 38%);
+  --clr-neutral-200: hsl(217, 19%, 24%);
+  --clr-neutral-300: hsl(218, 23%, 16%);
+
+  --fs-300: 2.4rem;
+  --fs-400: 2.8rem;
+}
 
 body {
   font-family: 'Manrope', sans-serif;
