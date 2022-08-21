@@ -170,7 +170,7 @@ body {
   font-size: 1.8rem;
   line-height: 3.2rem;
   text-align: center;
-  background: linear-gradient(135deg, #A060FF 0%, #CB30E3 49.21%, #FFA84E 100%);
+  background: linear-gradient(var(--clr-primary-600), var(--clr-primary-600));
   overflow: hidden;
 }
 
@@ -180,7 +180,7 @@ body {
   inset: 0;
   transition: all .3s ease-in-out;
   opacity: 0;
-  background: linear-gradient(var(--clr-primary-600), var(--clr-primary-600));
+  background: linear-gradient(135deg, #A060FF 0%, #CB30E3 49.21%, #FFA84E 100%);
 }
 
 .btn-dark:hover .btn-helper {
@@ -194,6 +194,7 @@ body {
   left: 47.4rem;
   width: 35rem;
   height: 60rem;
+  border-radius: 1.5rem;
   background-image: url("./assets/image-hero-portrait.png");
 }
 
@@ -206,6 +207,11 @@ body {
   width: 28.7rem;
   height: 3.6rem;
   background-image: url("./assets/pattern-curved-line-1.svg");
+  background-size: cover;
+}
+
+.cta-mobile-img {
+  display: none;
 }
 
 .cta-stats-wrapper {
@@ -238,19 +244,73 @@ body {
     margin-top: 8rem;
   }
 
+  .cta-content {
+    flex-direction: column;
+    padding-top: 8.8rem;
+    padding-bottom: 0;
+  }
+
+  .cta-text-wrapper {
+    max-width: 57.3rem;
+  }
+
   .cta-title {
     font-size: var(--heading-xl-fs-400);
     line-height: var(--heading-xl-lh-400);
+    max-width: 49.4rem;
   }
 
   .cta-text-mt-mb {
     margin-bottom: 4rem;
   }
+
+  .cta-img {
+    width: 28.1rem;
+    height: 48.2rem;
+    right: 0;
+    left: initial;
+    background-size: cover;
+  }
+
+  .cta-img::before {
+    width: 23.2rem;
+    height: 2.9rem;
+  }
+
+  .cta-stats-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 100%;
+    margin-top: 12.8rem;
+    text-align: center;
+  }
+
+  .cta-stats-wrapper > * {
+    flex-basis: 100%;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .cta {
-    margin-top: 5.6rem;
+    margin-top: 8.3rem;
+  }
+
+  .cta-content {
+    padding-top: 0;
+  }
+
+  .cta-content::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    z-index: 1000;
+    right: 3.7rem;
+    width: 15.1rem;
+    height: 1.9rem;
+    background-image: url("./assets/pattern-curved-line-1.svg");
+    background-size: cover;
+    transform: translateY(-100%);
   }
 
   .cta-title {
@@ -260,5 +320,21 @@ body {
 
   .cta-text-mt-mb {
     margin: 3.2rem 0;
+  }
+
+  .cta-img {
+    display: none;
+  }
+
+  .cta-mobile-img {
+    display: block;
+    margin-top: 5.5rem;
+    margin-bottom: 5.6rem;
+  }
+
+  .cta-stats-wrapper {
+    flex-direction: column;
+    margin-top: 0;
+    gap: 3.2rem;
   }
 }
