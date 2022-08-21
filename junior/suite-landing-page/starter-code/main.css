@@ -41,12 +41,30 @@ body {
   font-family: 'Epilogue', sans-serif;
   font-size: var(--body-fs-500);
   line-height: var(--body-lh-500);
+  background-color: var(--clr-primary-300);
 }
 
 .container {
   max-width: 114.2rem;
   margin: 0 auto;
   padding: 0 1.6rem;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    font-size: var(--body-fs-300);
+    line-height: var(--body-lh-300);
+  }
+
+  .container {
+    padding-left: 3.9rem;
+    padding-right: 4rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0 1.6rem;
+  }
 }
 
 /* HEADER */
@@ -103,5 +121,144 @@ body {
     font-size: 1.4rem;
     line-height: 2.4rem;
     max-width: 18.2rem;
+  }
+}
+
+/* CTA */
+.cta {
+  margin-top: 6.7rem;
+}
+
+.cta-content {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding-top: 10.3rem;
+  padding-bottom: 9.2rem;
+}
+
+.cta-text-wrapper {
+  max-width: 63.5rem;
+}
+
+.cta-title {
+  font-size: var(--heading-xl-fs-500);
+  line-height: var(--heading-xl-lh-500);
+  letter-spacing: -1px;
+}
+
+.thin {
+  font-weight: 400;
+}
+
+.cta-text {
+  max-width: 35rem;
+  color: var(--clr-primary-500);
+}
+
+.cta-text-mt-mb {
+  margin-top: 4rem;
+  margin-bottom: 5.2rem;
+}
+
+.btn-dark {
+  position: relative;
+  z-index: 10;
+  max-width: 25.6rem;
+  padding: 1.5rem 0 1.4rem;
+  color: var(--clr-primary-300);
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #A060FF 0%, #CB30E3 49.21%, #FFA84E 100%);
+  overflow: hidden;
+}
+
+.btn-helper {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  transition: all .3s ease-in-out;
+  opacity: 0;
+  background: linear-gradient(var(--clr-primary-600), var(--clr-primary-600));
+}
+
+.btn-dark:hover .btn-helper {
+  opacity: 1;
+}
+
+.cta-img {
+  position: absolute;
+  z-index: -5;
+  top: 0;
+  left: 47.4rem;
+  width: 35rem;
+  height: 60rem;
+  background-image: url("./assets/image-hero-portrait.png");
+}
+
+.cta-img::before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  top: 4.5rem;
+  left: -18.5rem;
+  width: 28.7rem;
+  height: 3.6rem;
+  background-image: url("./assets/pattern-curved-line-1.svg");
+}
+
+.cta-stats-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6.3rem;
+  width: 100%;
+  max-width: 19rem;
+}
+
+.cta-stats {
+
+}
+
+.cta-stats-main {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 5.6rem;
+}
+
+.cta-stats-secondary {
+  color: var(--clr-primary-500);
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  letter-spacing: 2.5px;
+}
+
+@media screen and (max-width: 1000px) {
+  .cta {
+    margin-top: 8rem;
+  }
+
+  .cta-title {
+    font-size: var(--heading-xl-fs-400);
+    line-height: var(--heading-xl-lh-400);
+  }
+
+  .cta-text-mt-mb {
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cta {
+    margin-top: 5.6rem;
+  }
+
+  .cta-title {
+    font-size: var(--heading-xl-fs-300);
+    line-height: var(--heading-xl-lh-300);
+  }
+
+  .cta-text-mt-mb {
+    margin: 3.2rem 0;
   }
 }
