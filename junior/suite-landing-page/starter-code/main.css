@@ -1,0 +1,38 @@
+:root {
+  --clr-primary-600: #172339;
+  --clr-primary-500: #49566d;
+  --clr-primary-400: #f3ede7;
+  --clr-primary-300: #faf8f6;
+
+  --clr-neutral-600: #ffa84e;
+  --clr-neutral-500: #cb30e3;
+  --clr-neutral-400: #a060ff;
+
+  --heading-xl-fs-300: 3.8rem;
+  --heading-xl-lh-300: 4.4rem;
+  --heading-xl-fs-400: 5.6rem;
+  --heading-xl-lh-400: 6.4rem;
+  --heading-xl-fs-500: 7.2rem;
+  --heading-xl-lh-500: 7.8rem;
+
+  --heading-l-fs-300: 4rem;
+  --heading-l-lh-300: 4.8rem;
+  --heading-l-fs-500: 4.8rem;
+  --heading-l-lh-500: 5.6rem;
+  
+  --heading-m-fs-300: 1.8rem;
+  --heading-m-lh-300: 3.2rem;
+
+  --heading-s-fs-300: 1.6rem;
+  --heading-s-lh-300: 2.6rem;
+
+  --body-fs-300: 1.6rem;
+  --body-lh-300: 2.8rem;
+  --body-fs-500: 1.8rem;
+  --body-lh-500: 3.2rem;
+  
+  --footer-fs-300: 1.8rem;
+  --footer-lh-300: 3.2rem;
+  --footer-fs-500: 2rem;
+  --footer-lh-500: 3.5rem;
+}
