@@ -203,6 +203,7 @@ h4 {
 
 .map-btn {
   left: 5.6rem;
+  width: 20.8rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -513,5 +514,74 @@ h4 {
 
   .map-container {
     max-width: 111rem;
+  }
+}
+
+/* LOCATION */
+.location {
+  background-color: var(--clr-primary-600);
+  color: var(--clr-primary-100);
+  padding: 4.8rem 0 5.6rem;
+}
+
+.location-title {
+  font-size: var(--heading-l-fs-300);
+  line-height: var(--heading-l-lh-300);
+  margin-bottom: 4.8rem;
+}
+
+.location-text-title {
+  font-size: var(--heading-s-fs-300);
+  line-height: var(--heading-s-lh-300);
+  margin-bottom: 2rem;
+}
+
+.location-text + .location-text {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .location {
+    padding: 8.8rem 0 8rem;
+  }
+
+  .location-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .location-text-wrapper {
+    max-width: 39.8rem;
+  }
+
+  .location-title {
+    font-size: var(--heading-l-fs-400);
+    line-height: var(--heading-l-lh-400);
+    max-width: 40%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .location {
+    padding: 10.4rem 0 12.8rem;
+  }
+
+  .location-title {
+    font-size: var(--heading-l-fs-500);
+    line-height: var(--heading-l-lh-500);
+  }
+
+  .location-text-wrapper {
+    max-width: 54rem;
+  }
+
+  .location-text + .location-text {
+    margin-top: 3.2rem;
+  }
+
+  .location-text-title {
+    font-size: var(--heading-s-fs-500);
+    line-height: var(--heading-s-lh-500);
+    margin-bottom: 2.4rem;
   }
 }
