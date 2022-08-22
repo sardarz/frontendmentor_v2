@@ -1,0 +1,150 @@
+:root {
+  --clr-primary-600: hsl(0, 0%, 8%);
+  --clr-primary-500: hsl(24, 56%, 63%);
+  --clr-primary-400: hsl(0, 0%, 27%);
+  --clr-primary-100: hsl(0, 0%, 100%);
+
+  --heading-xl-fs-500: 9.6rem;
+  --heading-xl-lh-500: 8.8rem;
+  --heading-xl-fs-400: 7rem;
+  --heading-xl-lh-400: 6.5rem;
+  --heading-xl-fs-300: 6rem;
+  --heading-xl-lh-300: 5.5rem;
+
+  --heading-l-fs-500: 7rem;
+  --heading-l-lh-500: 7rem;
+  --heading-l-fs-400: 5.5rem;
+  --heading-l-lh-400: 5rem;
+  --heading-l-fs-300: 5rem;
+  --heading-l-lh-300: 4.5rem;
+
+  --heading-m-fs-500: 6rem;
+  --heading-m-lh-500: 6rem;
+  --heading-m-fs-300: 5rem;
+  --heading-m-lh-300: 4.5rem;
+
+  --heading-s-fs-500: 3.6rem;
+  --heading-s-lh-500: 3.6rem;
+  --heading-s-fs-300: 3.2rem;
+  --heading-s-lh-300: 3.2rem;
+
+  --body-m-fs-500: 2.2rem;
+  --body-m-lh-500: 3.2rem;
+  --body-m-fs-300: 1.8rem;
+  --body-m-lh-300: 2.8rem;
+
+  --body-s-fs-500: 1.8rem;
+  --body-s-lh-500: 2.8rem;
+  --body-s-fs-300: 1.6rem;
+  --body-s-lh-300: 2.6rem;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-size: var(--body-m-fs-300);
+  line-height: var(--body-m-lh-300);
+  color: var(--clr-primary-400);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 900;
+}
+
+.clr-bright {
+  color: var(--clr-primary-100);
+}
+
+.clr-dark {
+  color: var(--clr-primary-600);
+}
+
+.clr-warm {
+  color: var(--clr-primary-500);
+}
+
+h1 {
+  font-size: var(--heading-xl-fs-300);
+  line-height: var(--heading-xl-lh-300);
+}
+
+h2 {
+  font-size: var(--heading-l-fs-300);
+  line-height: var(--heading-l-lh-300);
+}
+
+h3 {
+  font-size: var(--heading-m-fs-300);
+  line-height: var(--heading-m-lh-300);
+}
+
+h4 {
+  font-size: var(--heading-s-fs-300);
+  line-height: var(--heading-s-lh-300);
+}
+
+.fs-small {
+  font-size: var(--body-s-fs-300);
+  line-height: var(--body-s-lh-300);
+}
+
+.btn-style-500 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: 3.64px;
+  font-weight: 800;
+}
+
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: var(--heading-xl-fs-400);
+    line-height: var(--heading-xl-lh-400);
+  }
+  
+  h2 {
+    font-size: var(--heading-l-fs-400);
+    line-height: var(--heading-l-lh-400);
+  }
+  
+  h3 {
+    font-size: var(--heading-m-fs-400);
+    line-height: var(--heading-m-lh-400);
+  }
+  
+  h4 {
+    font-size: var(--heading-s-fs-400);
+    line-height: var(--heading-s-lh-400);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    font-size: var(--body-m-fs-500);
+    line-height: var(--body-m-lh-500);
+  }
+
+  h1 {
+    font-size: var(--heading-xl-fs-500);
+    line-height: var(--heading-xl-lh-500);
+  }
+  
+  h2 {
+    font-size: var(--heading-l-fs-500);
+    line-height: var(--heading-l-lh-500);
+  }
+  
+  h3 {
+    font-size: var(--heading-m-fs-500);
+    line-height: var(--heading-m-lh-500);
+  }
+  
+  h4 {
+    font-size: var(--heading-s-fs-500);
+    line-height: var(--heading-s-lh-500);
+  }
+
+  .fs-small {
+    font-size: var(--body-s-fs-500);
+    line-height: var(--body-s-lh-500);
+  }
+}
