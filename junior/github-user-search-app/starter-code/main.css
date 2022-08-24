@@ -18,6 +18,11 @@ body {
   font-size: 1.5rem;
   line-height: 2.5rem;
   background-color: var(--clr-light-primary-200);
+  transition: all .3s ease-in-out;
+}
+
+body.dark-theme {
+  background-color: var(--clr-dark-primary-600);
 }
 
 .container {
@@ -33,14 +38,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: burlywood;
   font-weight: 700;
+  margin-bottom: 3.6rem;
 }
 
 .github-card-logo {
   font-size: 2.6rem;
   line-height: 3.9rem;
   color: var(--clr-light-primary-500);
+  transition: all .3s ease-in-out;
+}
+
+.dark-theme .github-card-logo {
+  color: white;
 }
 
 .theme-switcher {
@@ -98,4 +108,61 @@ body {
 
 .dark-theme .theme-switcher-light {
   opacity: 1;
+}
+
+/* FORM */
+.github-card-form {
+  position: relative;
+}
+
+.github-card-input {
+  display: block;
+  width: 100%;
+  border-radius: 1.5rem;
+  outline: none;
+  border: none;
+  padding: 2.2rem 0;
+  padding-left: 8rem;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  color: var(--clr-light-primary-500);
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  transition: all .3s ease-in-out;
+}
+
+.github-card-input::placeholder {
+  color: var(--clr-light-primary-400);
+}
+
+.dark-theme .github-card-input {
+  background-color: var(--clr-dark-primary-400);
+  color: white;
+  box-shadow: none;
+}
+
+.github-card-form-icon {
+  pointer-events: none;
+  position: absolute;
+  left: 3.2rem;
+  top: 2.3rem;
+}
+
+.github-card-search {
+  position: absolute;
+  right: 1rem;
+  top: .95rem;
+  background-color: var(--clr-light-primary-600);
+  padding: 1.25rem 2.3rem 1.35rem 2.4rem;
+  color: white;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  outline: 0;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.github-card-search:active {
+  transform: translateY(2px);
 }
