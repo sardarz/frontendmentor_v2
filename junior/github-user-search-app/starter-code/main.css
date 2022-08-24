@@ -13,12 +13,12 @@
 }
 
 body {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   min-height: 100vh;
   font-size: 1.5rem;
   line-height: 2.5rem;
   background-color: var(--clr-light-primary-200);
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 body.dark-theme {
@@ -46,7 +46,7 @@ body.dark-theme {
   font-size: 2.6rem;
   line-height: 3.9rem;
   color: var(--clr-light-primary-500);
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .dark-theme .github-card-logo {
@@ -64,11 +64,12 @@ body.dark-theme {
   cursor: pointer;
 }
 
-.theme-switcher-light, .theme-switcher-dark {
+.theme-switcher-light,
+.theme-switcher-dark {
   display: flex;
   align-items: center;
   gap: 1.6rem;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .theme-switcher-light {
@@ -95,10 +96,10 @@ body.dark-theme {
 }
 
 .theme-switcher path {
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.theme-switcher .theme-switcher-dark:hover path{
+.theme-switcher .theme-switcher-dark:hover path {
   fill: var(--clr-dark-primary-600);
 }
 
@@ -113,6 +114,7 @@ body.dark-theme {
 /* FORM */
 .github-card-form {
   position: relative;
+  margin-bottom: 2.4rem;
 }
 
 .github-card-input {
@@ -127,7 +129,7 @@ body.dark-theme {
   line-height: 2.5rem;
   color: var(--clr-light-primary-500);
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .github-card-input::placeholder {
@@ -150,7 +152,7 @@ body.dark-theme {
 .github-card-search {
   position: absolute;
   right: 1rem;
-  top: .95rem;
+  top: 0.95rem;
   background-color: var(--clr-light-primary-600);
   padding: 1.25rem 2.3rem 1.35rem 2.4rem;
   color: white;
@@ -160,9 +162,126 @@ body.dark-theme {
   border: none;
   border-radius: 1rem;
   cursor: pointer;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .github-card-search:active {
   transform: translateY(2px);
+}
+
+/* GITHUB CARD INFO */
+.github-card-info {
+  position: relative;
+  padding: 4.4rem 4.8rem 4.8rem 20.2rem;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  transition: all .3s ease-in-out;
+}
+
+.github-card-img {
+  position: absolute;
+  top: 4.8rem;
+  left: 4.8rem;
+  width: 11.7rem;
+  height: 11.7rem;
+  background-color: coral;
+}
+
+.github-card-user-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.github-card-username {
+  color: var(--clr-light-primary-500);
+  font-size: 2.6rem;
+  line-height: 3.9rem;
+}
+
+.github-card-username-link {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--clr-light-primary-600);
+  text-decoration: none;
+}
+
+.github-card-joined {
+  color: var(--clr-light-primary-300);
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  transform: translateY(8px);
+}
+
+.github-card-user-bio {
+  margin: 2rem 0 3.2rem;
+  color: var(--clr-light-primary-400);
+}
+
+.github-card-repo-info {
+  display: flex;
+  padding: 1.5rem 3.2rem 1.7rem;
+  background-color: var(--clr-light-primary-200);
+  border-radius: 1rem;
+  margin-bottom: 3.7rem;
+  transition: all .3s ease-in-out;
+}
+
+.github-card-repo-info-item h3 {
+  font-size: 2.2rem;
+  line-height: 3.3rem;
+  font-weight: 700;
+}
+
+.github-card-repo-info-item:nth-child(2) {
+  margin-left: 9.9rem;
+}
+
+.github-card-repo-info-item:nth-child(3) {
+  margin-left: 8.2rem;
+}
+
+.github-card-repo-info-title {
+  color: var(--clr-light-primary-400);
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+}
+
+.github-card-links {
+  display: flex;
+  justify-content: space-between;
+  max-width: 43rem;
+  color: var(--clr-light-primary-400);
+}
+
+.github-card-link-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.github-card-link {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.icon-location {
+  margin-right: 5px;
+}
+
+.dark-theme .github-card-info {
+  background-color: var(--clr-dark-primary-400);
+}
+
+.dark-theme .github-card-username,
+.dark-theme .github-card-joined,
+.dark-theme .github-card-user-bio,
+.dark-theme .github-card-repo-info-title,
+.dark-theme .github-card-link {
+  color: white;
+}
+
+.dark-theme .github-card-repo-info {
+  background-color: var(--clr-dark-primary-600);
+  color: white;
 }
