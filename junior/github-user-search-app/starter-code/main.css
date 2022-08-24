@@ -17,4 +17,85 @@ body {
   min-height: 100vh;
   font-size: 1.5rem;
   line-height: 2.5rem;
+  background-color: var(--clr-light-primary-200);
+}
+
+.container {
+  max-width: 73rem;
+  margin: 0 auto;
+}
+
+.github-card {
+  margin-top: 14.4rem;
+}
+
+.github-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: burlywood;
+  font-weight: 700;
+}
+
+.github-card-logo {
+  font-size: 2.6rem;
+  line-height: 3.9rem;
+  color: var(--clr-light-primary-500);
+}
+
+.theme-switcher {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.theme-switcher-light, .theme-switcher-dark {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  transition: all .3s ease-in-out;
+}
+
+.theme-switcher-light {
+  color: white;
+  opacity: 0;
+}
+
+.theme-switcher:hover .theme-switcher-light {
+  color: var(--clr-light-primary-400);
+}
+
+.theme-switcher:hover .theme-switcher-light path {
+  fill: var(--clr-light-primary-400);
+}
+
+.theme-switcher-dark {
+  position: absolute;
+  align-self: end;
+  color: var(--clr-light-primary-300);
+}
+
+.theme-switcher:hover .theme-switcher-dark {
+  color: var(--clr-dark-primary-600);
+}
+
+.theme-switcher path {
+  transition: all .3s ease-in-out;
+}
+
+.theme-switcher .theme-switcher-dark:hover path{
+  fill: var(--clr-dark-primary-600);
+}
+
+.dark-theme .theme-switcher-dark {
+  opacity: 0;
+}
+
+.dark-theme .theme-switcher-light {
+  opacity: 1;
 }
