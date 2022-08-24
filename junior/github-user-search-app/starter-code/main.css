@@ -30,6 +30,11 @@ body.dark-theme {
   margin: 0 auto;
 }
 
+.low-opacity {
+  opacity: .5;
+  pointer-events: none;
+}
+
 .github-card {
   margin-top: 14.4rem;
 }
@@ -117,6 +122,21 @@ body.dark-theme {
   margin-bottom: 2.4rem;
 }
 
+.github-card-form::before {
+  content: "No results";
+  position: absolute;
+  color: red;
+  right: 14rem;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.github-card-form.error::before {
+  opacity: 1;
+}
+
 .github-card-input {
   display: block;
   width: 100%;
@@ -189,7 +209,8 @@ body.dark-theme {
   left: 4.8rem;
   width: 11.7rem;
   height: 11.7rem;
-  background-color: coral;
+  background-color: lightblue;
+  border-radius: 50%;
 }
 
 .github-card-user-wrapper {
@@ -252,10 +273,24 @@ body.dark-theme {
 }
 
 .github-card-links {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
+  column-gap: 6.2rem;
   max-width: 43rem;
   color: var(--clr-light-primary-400);
+}
+
+a {
+  text-decoration: none;
+}
+
+.github-card-links a {
+  color: var(--clr-light-primary-400);
+}
+
+.github-card-links > * {
+  width: 100%;
 }
 
 .github-card-link-wrapper {
@@ -268,6 +303,10 @@ body.dark-theme {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+}
+
+.github-card-link:nth-child(4) {
+  margin-left: auto;
 }
 
 .icon-location {
@@ -349,6 +388,7 @@ body.dark-theme {
     right: 7px;
   }
 
+
   .github-card-info {
     padding: 3.2rem 2.4rem 4.8rem;
   }
@@ -407,6 +447,7 @@ body.dark-theme {
   }
 
   .github-card-links {
+    display: flex;
     flex-direction: column;
     justify-content: start;
     gap: 1.6rem;
@@ -414,5 +455,16 @@ body.dark-theme {
     line-height: 1.9rem;
   }
 
+  .github-card-links > * {
+    width: 100%;
+  }
 
+  body {
+    padding-bottom: 3rem;
+  }
+
+  .github-card-form::before {
+    background-color: #fff;
+    right: 10rem;
+  }
 }
