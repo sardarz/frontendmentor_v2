@@ -1,0 +1,12 @@
+:root {
+  --clr-primary-400: hsl(176, 50%, 47%);
+  --clr-primary-500: hsl(176, 72%, 28%);
+
+  --clr-neutral-400: hsl(0, 0%, 48%);
+  --clr-neutral-500: hsl(0, 0%, 0%);
+}
+
+body {
+  font-family: 'Commissioner', sans-serif;
+  font-size: 1.6rem;
+}
