@@ -223,12 +223,17 @@ a:hover {
   font-weight: 700;
   padding: 1.7rem 0 1.9rem;
   cursor: pointer;
+  transition: all .3s ease;
 }
 
 .btn-backing {
   text-align: center;
   width: 20.4rem;
   color: white; 
+  background-color: var(--clr-primary-400);
+}
+
+.btn-backing:hover {
   background-color: var(--clr-primary-500);
 }
 
@@ -236,6 +241,14 @@ a:hover {
   background: hsla(0, 0%, 18%, 0.05);
   width: 17.4rem;
   position: relative;
+}
+
+.btn-bookmark circle {
+  transition: all .3s ease;
+}
+
+.btn-bookmark:hover circle {
+  fill: var(--clr-neutral-400);
 }
 
 .btn-bookmark p {
@@ -255,10 +268,244 @@ a:hover {
   background-image: url("./images/icon-bookmark.svg");
 }
 
-.btn-bookmark circle {
+/* .btn-bookmark circle {
   fill: var(--clr-neutral-400);
 }
 
 .btn-bookmark path {
   fill: #b1b1b1;
+} */
+
+.stats {
+  padding: 4.8rem 0;
+}
+
+.stats-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.stat-backed {
+
+}
+
+.stat-backers {
+  margin-left: 9rem;
+}
+
+.stat-days, .stat-backers {
+  position: relative;
+}
+
+.stat-backers::before, .stat-days::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: rgb(0, 0, 0, 0.15);
+  left: -4.7rem;
+}
+
+.stat-days {
+  margin-left: 13.9rem;
+}
+
+.stat-title {
+  font-weight: 700;
+  font-size: 3.2rem;
+  color: black;
+  margin-bottom: 8px;
+}
+
+.stat-text {
+  font-size: 1.5rem;
+  color: var(--clr-neutral-400);
+}
+
+.stats-progress-bar {
+  position: relative;
+  border-radius: 33rem;
+  height: 1.2rem;
+  background-color: rgb(0, 0, 0, 0.05);
+  margin-top: 3.7rem;
+}
+
+.progress {
+  width: 70%;
+  background-color: var(--clr-primary-400);
+  height: 100%;
+  border-radius: 33rem;
+}
+
+.about {
+  padding: 4.8rem 0;
+}
+
+.about-title {
+  font-size: 2rem;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 3.5rem;
+}
+
+.about-text {
+  font-size: 1.6rem;
+  line-height: 3rem;
+  color: var(--clr-neutral-400);
+  margin-bottom: 4rem;
+}
+
+.stands-wrapper {
+  display: grid;
+  gap: 2.4rem;
+}
+
+.stand {
+  padding: 3.8rem 3.2rem;
+  border: 1px solid rgb(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+.stand-desc, .stand-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stand-title {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.stand-pledge {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--clr-primary-400);
+}
+
+.stand-text {
+  line-height: 3rem;
+  color: var(--clr-neutral-400);
+  margin: 2.4rem 0;
+}
+
+.stand-footer {
+  display: flex;
+  align-items: center;
+}
+
+.stand-footer-text-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stand-left {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.stand-footer span {
+  font-size: 1.5rem;
+  color: var(--clr-neutral-400);
+  font-weight: 400;
+}
+
+.stand-reward {
+  outline: 0;
+  border: none;
+  background-color: var(--clr-primary-400);
+  color: white;
+  transition: all .3s ease;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 1.5rem 0 1.6rem;
+  width: 15.7rem;
+  border-radius: 33rem;
+  cursor: pointer;
+}
+
+.stand-reward:hover {
+  background-color: var(--clr-primary-500);
+}
+
+.out-of-stock {
+  position: relative;
+}
+
+.out-of-stock::before {
+  content: '';
+  position: absolute;
+  background-color: rgb(255, 255, 255, .5);
+  inset: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .main-content {
+    padding: 0 2.4rem;
+  }
+
+  .main-container {
+    padding: 0 2.4rem;
+  }
+
+  .mastercraft h1 {
+    font-size: 2rem;
+  }
+
+  .mastercraft p {
+    font-size: 1.4rem;
+  }
+
+  .btn-bookmark {
+    width: 5.6rem;
+    height: 5.6rem;
+    overflow: hidden;
+  }
+
+  .stats {
+    padding: 3.2rem 0 4rem;
+  }
+
+  .stats-wrapper {
+    /* position: relative; */
+    flex-direction: column;
+    gap: 4.9rem;
+  }
+
+  .stat-days, .stat-backers {
+    margin-left: 0;
+    /* position: static; */
+  }
+
+  .stat-backers::before, .stat-days::before {
+    height: 1px;
+    width: 8rem;
+    left: 0;
+    top: -2.4rem;
+  }
+
+  .stat-days::before {
+    left: -1.6rem;
+  }
+
+  .stand {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 2.4rem;
+  }
+
+  .stand-desc, .stand-footer {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .stand-desc {
+    gap: 8px;
+  }
+
+  .stand-footer {
+    gap: 2.4rem;
+  }
 }
