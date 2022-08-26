@@ -518,12 +518,12 @@ a {
   margin: 4rem 0 8.8rem;
 }
 
-.footer-link a{
-  transition: all .3s ease;
+.footer-link a {
+  transition: all 0.3s ease;
 }
 
-.footer-link a:hover{
-  transition: all .3s ease;
+.footer-link a:hover {
+  transition: all 0.3s ease;
   color: white;
 }
 
@@ -534,7 +534,7 @@ a {
 }
 
 .social-link path {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .social-link a:hover path {
