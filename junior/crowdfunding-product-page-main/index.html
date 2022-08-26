@@ -14,7 +14,26 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="main.css">
 </head>
-<body>
+<body class="body">
+
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="#"><img src="./images/logo.svg" alt="" class="header-logo"></a>
+        <ul class="header-links">
+          <li class="header-link"><a href="#">About</a></li>
+          <li class="header-link"><a href="#">Discover</a></li>
+          <li class="header-link"><a href="#">Get started</a></li>
+        </ul>
+        <div class="menu-wrapper">
+          <img src="./images/icon-close-menu.svg" alt="" class="close">
+          <img src="./images/icon-hamburger.svg" alt="" class="hamburg">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
   About
   Discover
   Get Started
@@ -114,5 +133,15 @@
   Got it!
 
   <!-- Success modal end -->
+  <button>kek</button>
+  <script>
+    const menuWrapper = document.querySelector(".menu-wrapper")
+    const body = document.body
+
+    menuWrapper.addEventListener('click', evt => {
+      body.classList.toggle('show-menu')
+      
+    })
+  </script>
 </body>
 </html>
