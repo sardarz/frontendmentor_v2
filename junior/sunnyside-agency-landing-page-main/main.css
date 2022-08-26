@@ -3,7 +3,7 @@
   --clr-primary-300: hsl(51, 100%, 49%);
   --clr-primary-400: hsl(167, 40%, 24%);
   --clr-primary-500: hsl(198, 62%, 26%);
-  --clr-primary-600:hsl(168, 34%, 41%);
+  --clr-primary-600: hsl(168, 34%, 41%);
 
   --clr-neutral-200: hsl(212, 27%, 19%);
   --clr-neutral-300: hsl(213, 9%, 39%);
@@ -11,8 +11,8 @@
   --clr-neutral-500: hsl(210, 4%, 67%);
   --clr-neutral-600: hsl(0, 0%, 100%);
 
-  --ff-body: 'Barlow', sans-serif;
-  --ff-heading: 'Fraunces', serif;
+  --ff-body: "Barlow", sans-serif;
+  --ff-heading: "Fraunces", serif;
 }
 
 body {
@@ -30,7 +30,7 @@ ul {
   list-style: none;
 }
 
-a { 
+a {
   text-decoration: none;
   color: inherit;
 }
@@ -84,7 +84,7 @@ a {
   height: 30.5rem;
   background-color: #fff;
   transform: translateX(-50%) translateY(-150%);
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .open .nav {
@@ -125,7 +125,7 @@ a {
 }
 
 .hamburger {
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .open .hamburger {
@@ -192,7 +192,7 @@ a {
   .nav-item:last-child a {
     background-color: #fff;
     color: var(--clr-neutral-200);
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .nav-item:last-child a:hover {
@@ -214,7 +214,6 @@ a {
   }
 }
 
-
 /* HERO */
 .hero-content {
   display: grid;
@@ -229,7 +228,8 @@ a {
   background-image: url("./images/mobile/image-stand-out.jpg");
 }
 
-.egg, .cup {
+.egg,
+.cup {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -254,7 +254,7 @@ a {
   line-height: 3rem;
   color: var(--clr-neutral-400);
   letter-spacing: -0.13px;
-} 
+}
 
 .hero-text-field a {
   display: inline-block;
@@ -277,8 +277,8 @@ a {
   background-color: var(--clr-primary-200);
   border-radius: 2.8rem;
   z-index: -10;
-  opacity: .25;
-  transition: opacity .3s ease-in-out;
+  opacity: 0.25;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .hero-text-field.yellow a::before {
@@ -297,7 +297,8 @@ a {
   background-image: url("./images/mobile/image-photography.jpg");
 }
 
-.cherry, .orange {
+.cherry,
+.orange {
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -342,7 +343,7 @@ a {
   }
 
   .hero-text-field {
-    padding: 15.7rem 16.5rem 15.7rem 11rem  ;
+    padding: 15.7rem 16.5rem 15.7rem 11rem;
     text-align: left;
   }
 
@@ -358,12 +359,12 @@ a {
   .hero-text-bg {
     padding: 39.8rem 19rem 5.9rem 19.1rem;
   }
-  
+
   .cherry {
     background-image: url("./images/dekstop/image-graphic-design.jpg");
     background-image: url("./images/desktop/image-graphic-design.jpg");
   }
-  
+
   .orange {
     background-image: url("./images/desktop/image-photography.jpg");
   }
@@ -478,7 +479,7 @@ a {
   background-image: url("./images/mobile/image-gallery-sugar-cubes.jpg");
 }
 
-@media screen  and (min-width: 1000px ) {
+@media screen and (min-width: 1000px) {
   .gallery {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 44.7rem;
