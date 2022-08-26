@@ -368,3 +368,123 @@ a {
     background-image: url("./images/desktop/image-photography.jpg");
   }
 }
+
+/* TESTIMONIALS */
+.testimonials {
+  margin: 6.4rem 0 8.6rem;
+}
+
+.testimonials-content {
+  text-align: center;
+}
+
+.testimonials-title {
+  margin-bottom: 6.4rem;
+  font-family: var(--ff-heading);
+  font-weight: 900;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: 4px;
+  color: var(--clr-neutral-500);
+}
+
+.testimonials-grid {
+  display: grid;
+  gap: 6.4rem;
+}
+
+.testimonials-avatar {
+  width: 7.2rem;
+  height: 7.2rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 3.2rem;
+}
+
+.testimonials-text {
+  margin-bottom: 3.2rem;
+  line-height: 3.2rem;
+  letter-spacing: -0.13px;
+  color: var(--clr-neutral-300);
+}
+
+.testimonials-name {
+  margin-bottom: 9px;
+  line-height: 2.2rem;
+  letter-spacing: -0.13px;
+  font-family: var(--ff-heading);
+  font-weight: 900;
+  color: var(--clr-neutral-200);
+}
+
+.testimonials-job {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.1px;
+  color: var(--clr-neutral-500);
+}
+
+@media screen and (min-width: 600px) {
+  .testimonials {
+    margin: 16rem 0;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .testimonials-title {
+    margin-bottom: 8.1rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: 5px;
+  }
+
+  .testimonials-avatar {
+    margin-bottom: 5.8rem;
+  }
+
+  .testimonials-text {
+    margin-bottom: 6.9rem;
+  }
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 100%;
+}
+
+.milk {
+  background-image: url("./images/mobile/image-gallery-milkbottles.jpg");
+}
+
+.lemon {
+  background-image: url("./images/mobile/image-gallery-orange.jpg");
+}
+
+.cone {
+  background-image: url("./images/mobile/image-gallery-cone.jpg");
+}
+
+.cubes {
+  background-image: url("./images/mobile/image-gallery-sugar-cubes.jpg");
+}
+
+@media screen  and (min-width: 1000px ) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 44.7rem;
+  }
+
+  .gallery-img {
+    padding-top: 0;
+  }
+}
