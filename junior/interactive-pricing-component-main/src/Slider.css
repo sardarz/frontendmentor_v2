@@ -1,0 +1,19 @@
+.slider {
+  background: hsla(225, 64%, 95%, 1);
+  height: 8px;
+  border-radius: 5px;
+  margin-top: 2.4rem;
+}
+
+.thumb {
+  width: 4rem;
+  height: 4rem;
+  background-color: #10D8C4;
+  border-radius: 50%;
+  background-image: url("./images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  position: relative;
+  top: -1.6rem;
+}

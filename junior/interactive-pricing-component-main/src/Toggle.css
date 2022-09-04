@@ -1,0 +1,28 @@
+.toggle-wrapper {
+  position: relative;
+  background: #CFD8EF;
+  width: 4.3rem;
+  height: 2.2rem;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  transition: all .3s ease;
+}
+
+.toggle {
+  position: absolute;
+  width: 1.4rem;
+  height: 1.4rem;
+  top: 4px;
+  left: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: all .3s ease;
+}
+
+.active.toggle-wrapper {
+  background-color: #7AEADF;
+}
+
+.active .toggle {
+  transform: translateX(2.1rem);
+}
